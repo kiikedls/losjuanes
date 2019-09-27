@@ -81,9 +81,9 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Los Juanes <small>Y UN RAUL</small>
+                    Los Juanes
                 </div>
-                
+                <small>Y UN RAUL</small>
                 <div class="links">
                     <a href="https://laravel.com/docs">Juan Daniel</a>
                     <a href="https://laracasts.com">Juan Enrique</a>
