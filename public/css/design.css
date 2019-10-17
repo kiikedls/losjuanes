@@ -1,0 +1,43 @@
+@media only screen and (min-width: 600px) {
+		#Logo{
+			height: 50px;
+			width: 120px;
+			margin: 10px;
+		}
+	}
+	@media only screen and (min-width: 768px) {
+	/* For desktop: */
+	#Logo{
+			height: 50px;
+			width: 120px;
+			margin: 10px;
+		}
+	}
+	#navegador{
+		background-color: white;
+	}
+	#navegador a{
+		color: black;
+	}
+	#Logo{
+		margin-top: 5px;
+		height: 50px;
+		width: 120px;
+	}
+	#toolimage{
+		margin: 20px;
+		border-style: inset;
+		border-width:2px;
+		border-color: gray;
+	}
+	table th{
+		color: blue;
+		text-align: center;
+		font-size: 16px;
+	}
+	table td{
+		color: black;
+		font-size: 16px;
+		text-align: center;
+	}
+
