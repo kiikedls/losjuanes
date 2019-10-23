@@ -1,0 +1,44 @@
+body{
+    background-size:100% 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    #Logo{
+      height: 50px;
+      width: 120px;
+      margin: 10px;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+  /* For desktop: */
+  #Logo{
+      height: 50px;
+      width: 120px;
+      margin: 10px;
+    }
+  }
+
+  #navegador{
+    background-color: white ;
+    height: 108px; 
+  }
+  #navegador a{
+    color: black;
+  }
+  #Logo{
+    margin-top: 10px;
+    height: 90px;
+    width: 260px;
+  }
+  #toolimage{
+    margin: 20px;
+    border-style: inset;
+    border-width:2px;
+    border-color: gray;
+  }
+  div p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+  }
+
+
