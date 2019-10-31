@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/spotify', function () {
     return view('spotify');
 });
+
+Route::get('/browse/featured', function() {
+    return view('interfaz');
+});
