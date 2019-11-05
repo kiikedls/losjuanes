@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'proxima_novaregular';
+    src: url('/font/proximanova-regular-webfont.woff2') format('woff2'),
+        url('font/proximanova-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+* {
+    font-family: 'proxima_novaregular';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#logo-container {
+    margin-top: 24px;
+}
+
+#main-nav {
+    width: 230px;
+    height: 86vh;
+    position: inherit;
+}
+
+#main-nav .logo {
+    margin-top: 10px;
+    margin-left: -8px;
+    margin-bottom: 12px;
+}
+
+#main-nav li {
+    font-size: 14px;
+    margin-left: -8px;
+}
+
+#main-nav li.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+#main-nav li.menu a {
+    height: 40px;
+}
+
+#main-nav li a i {
+    margin-right: 12px;
+}
+
+.selected {
+    border-left: 12px solid #1ed760 !important;
+}
+
+.page-footer {
+    height: 14vh;
+    background-color: #282828 !important;
+}
