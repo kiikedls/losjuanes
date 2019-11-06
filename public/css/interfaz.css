@@ -10,18 +10,11 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+	background-color: #181818;
 }
 
-main {
-    flex: 1 0 auto;
-    display: flex;
-    flex-direction: row;
-}
-
-* {
-    font-family: 'proxima_novaregular';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+text, p, small, h1, h2, h3, h4, h5, h6 {
+    font-family: 'proxima_novaregular' !important;
 }
 
 #logo-container {
@@ -47,22 +40,25 @@ main {
     flex-direction: column;
 }
 
-.selected {
-    border-left: 12px solid #1ed760 !important;
-    color: white !important;
-}
-
-.selected i {
-    color: white !important;
-}
-
 #main-nav li.menu a {
     height: 40px;
     color: #b3b3b3;
 }
 
+#main-nav li a i {
+    margin-right: 12px;
+}
+
 #main-nav li.menu a i {
-    color: #b3b3b3;
+    color: #b3b3b3 !important;
+}
+
+.categories div a {
+	color: #a3a3a3;
+}
+
+.categories div a:hover {
+	color: white;
 }
 
 #main-nav li.menu a:hover {
@@ -78,24 +74,19 @@ main {
     width: 100%;
 }
 
+#main-nav li.menu-bottom hr {
+	color: #b3b3b3;
+	width: 20px;
+}
+
 #main-nav li.menu-bottom a.priv-info {
 	font-size: 12px;
     color: #b3b3b3;
 	height: 30px;
 }
 
-#main-nav li.menu-bottom hr {
-	color: #b3b3b3;
-	width: 20px;
-}
-
-#main-nav li a i {
-    margin-right: 12px;
-}
-
-.page-footer {
-    height: 14vh;
-    background-color: #282828 !important;
+#main-nav li.menu-bottom a.priv-info:hover {
+	text-decoration: underline;
 }
 
 .btn-menu {
@@ -117,4 +108,37 @@ main {
 
 .btn-menu-dark {
 	background-color: #121212 !important;
+}
+
+.categories {
+	margin-top: 34px;
+	font-size: 12.5px;
+	font-weight: bold;
+	letter-spacing: 1.5px;
+}
+
+.content {
+	flex: 1;
+}
+
+.main-container {
+	display: flex; flex-direction: row;
+}
+
+.page-footer {
+    height: 14vh;
+    background-color: #282828 !important;
+}
+
+.selected, .selected i {
+	color: white !important;
+}
+
+#main-nav .selected {
+    border-left: 12px solid #1ed760 !important;
+}
+
+.categories .selected {
+	border-bottom: 2px solid #1ed760 !important;
+	padding-bottom: 2px;
 }
