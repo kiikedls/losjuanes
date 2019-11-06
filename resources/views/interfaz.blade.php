@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" href="https://open.scdn.co/static/images/favicon.png ">
+    <link rel="icon" href="https://open.scdn.co/static/images/favicon.png">
     <title>Spotify - Inicio</title>
 
     <link rel="stylesheet" href="/css/interfaz.css">
@@ -24,9 +24,12 @@
                 </a>
             </li>
             <li class="menu">
-                <a href="#" class="white-text selected"><i class="fas fa-home white-text"></i><b>Inicio</b></a>
-                <a href="#" class="white-text"><i class="fas fa-search white-text"></i><b>Buscar</b></a>
-                <a href="#" class="white-text"><i class="fas fa-book-open white-text"></i><b>Tu biblioteca</b></a>
+                <a href="#" class="selected"><i class="fas fa-home"></i><b>Inicio</b></a>
+                <a href="#"><i class="fas fa-search"></i><b>Buscar</b></a>
+                <a href="#"><i class="fas fa-book-open"></i><b>Tu biblioteca</b></a>
+            </li>
+            <li class="menu-bottom">
+                <a class="waves-effect waves-light btn-small btn-menu-1"><b>Iniciar sesión</b></a>
             </li>
         </ul>
     </main>
