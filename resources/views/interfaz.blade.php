@@ -29,7 +29,11 @@
                 <a href="#"><i class="fas fa-book-open"></i><b>Tu biblioteca</b></a>
             </li>
             <li class="menu-bottom">
-                <a class="waves-effect waves-light btn-small btn-menu-1"><b>Iniciar sesión</b></a>
+                <a class="waves-effect waves-light btn-small btn-menu white black-text" style="margin-bottom: 8px;"><b>Registrarte</b></a>
+                <a class="waves-effect waves-light btn-small btn-menu btn-menu-dark"><b>Iniciar sesión</b></a>
+                <a href="#" class="center-align priv-info" style="margin-bottom: 4px;">Cookies</a>
+                <hr class="center-align" style="width: 10px;">
+                <a href="#" class="center-align priv-info" style="margin-top: -14px;">Privacidad</a>
             </li>
         </ul>
     </main>

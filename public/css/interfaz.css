@@ -74,8 +74,19 @@ main {
     flex-direction: column;
     position: fixed;
     bottom: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 40px;
     width: 100%;
+}
+
+#main-nav li.menu-bottom a.priv-info {
+	font-size: 12px;
+    color: #b3b3b3;
+	height: 30px;
+}
+
+#main-nav li.menu-bottom hr {
+	color: #b3b3b3;
+	width: 20px;
 }
 
 #main-nav li a i {
@@ -87,14 +98,23 @@ main {
     background-color: #282828 !important;
 }
 
-.btn-menu-1 {
+.btn-menu {
     height: 34px !important;
 	line-height: 24px !important;
-	margin-left: 30px !important;
-	margin-right: 30px !important;
+	margin-left: 24px !important;
+	margin-right: 24px !important;
     padding-top: 4px !important;
 	background-color: #121212 !important;
 	font-size: 12px !important;
 	border: 1px solid white !important;
   	border-radius: 16px !important;
+	transition: transform .02s;
+}
+
+.btn-menu:hover {
+	transform: scale(1.1);
+}
+
+.btn-menu-dark {
+	background-color: #121212 !important;
 }
