@@ -46,6 +46,8 @@
 					<div class="col s2"><a href="#">DESCUBRIR</a></div>
 				</div>
 			</div>
+
+			<div style="height: 1000px"></div>
 		</main>
 	</div>
 

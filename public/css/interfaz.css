@@ -17,6 +17,12 @@ body {
 	background-color: #181818;
 }
 
+main {
+	flex: 1;
+	height: 86vh;
+	overflow: auto;
+}
+
 #logo-container {
     margin-top: 24px;
 }
@@ -111,10 +117,6 @@ body {
 	font-size: 12.5px;
 	font-weight: bold;
 	letter-spacing: 1.5px;
-}
-
-.content {
-	flex: 1;
 }
 
 .main-container {
