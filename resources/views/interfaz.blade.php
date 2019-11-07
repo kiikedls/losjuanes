@@ -47,7 +47,36 @@
 				</div>
 			</div>
 
-			<div style="height: 1000px"></div>
+			<div style="margin-left: 20px; margin-right: 20px;">
+				<h4 class="white-text title"><b>Para pasar</b></h4>
+				<p class="text-gray">Música para que no repruebes diseño web.</p>
+				<div class="row img-container center-align">
+					<figure>
+						<img src="/img/main1/ini1.jpg" alt="">
+						<figcaption>Música instrumental para estudiar</figcaption>
+					</figure>
+					<figure>
+						<img src="/img/main1/ini2.jpg" alt="">
+						<figcaption>Música para leer</figcaption>
+					</figure>
+					<figure>
+						<img src="/img/main1/ini3.jpg" alt="">
+						<figcaption>Piano de fondo</figcaption>
+					</figure>
+					<figure>
+						<img src="/img/main1/ini4.jpg" alt="">
+						<figcaption>Lo-Fi Beats</figcaption>
+					</figure>
+					<figure>
+						<img src="/img/main1/ini5.jpg" alt="">
+						<figcaption>Tarea Casual</figcaption>
+					</figure>
+					<figure>
+						<img src="/img/main1/ini6.jpg" alt="">
+						<figcaption>Concentración perfecta</figcaption>
+					</figure>
+				</div>
+			</div>
 		</main>
 	</div>
 
