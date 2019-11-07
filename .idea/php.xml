@@ -87,6 +87,33 @@
       <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
       <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
       <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/js-phpize/js-phpize-phug" />
+      <path value="$PROJECT_DIR$/vendor/js-phpize/js-phpize" />
+      <path value="$PROJECT_DIR$/vendor/pug-php/pug-filter-less" />
+      <path value="$PROJECT_DIR$/vendor/pug-php/pug-filter-react" />
+      <path value="$PROJECT_DIR$/vendor/pug-php/pug-filter-stylus" />
+      <path value="$PROJECT_DIR$/vendor/pug-php/pug-assets" />
+      <path value="$PROJECT_DIR$/vendor/pug-php/pug" />
+      <path value="$PROJECT_DIR$/vendor/pug-php/pug-filter-markdown" />
+      <path value="$PROJECT_DIR$/vendor/pug-php/pug-filter-coffee-script" />
+      <path value="$PROJECT_DIR$/vendor/pug-php/pug-minify" />
+      <path value="$PROJECT_DIR$/vendor/gkralik/php-uglifyjs" />
+      <path value="$PROJECT_DIR$/vendor/natxet/cssmin" />
+      <path value="$PROJECT_DIR$/vendor/bkwld/laravel-pug" />
+      <path value="$PROJECT_DIR$/vendor/phug/phug" />
+      <path value="$PROJECT_DIR$/vendor/phug/js-transformer-filter" />
+      <path value="$PROJECT_DIR$/vendor/cebe/markdown" />
+      <path value="$PROJECT_DIR$/vendor/pug/installer" />
+      <path value="$PROJECT_DIR$/vendor/nodejs-php-fallback/less" />
+      <path value="$PROJECT_DIR$/vendor/nodejs-php-fallback/stylus" />
+      <path value="$PROJECT_DIR$/vendor/nodejs-php-fallback/react" />
+      <path value="$PROJECT_DIR$/vendor/nodejs-php-fallback/uglify" />
+      <path value="$PROJECT_DIR$/vendor/nodejs-php-fallback/nodejs-php-fallback" />
+      <path value="$PROJECT_DIR$/vendor/nodejs-php-fallback/coffeescript" />
+      <path value="$PROJECT_DIR$/vendor/js-transformer/js-transformer" />
+      <path value="$PROJECT_DIR$/vendor/kylekatarnls/less.php" />
+      <path value="$PROJECT_DIR$/vendor/kylekatarnls/stylus" />
+      <path value="$PROJECT_DIR$/vendor/kylekatarnls/coffeescript" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

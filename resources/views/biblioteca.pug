@@ -1,0 +1,489 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width-device-width, initial-scale-1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie-edge")
+        title Spotify - Tu bibliotecaa
+        link(rel="icon", href="https://open.scdn.co/static/images/favicon.png ")
+        link(rel="shortcut icon", href="img/Spotify.ico")
+        link(rel="stylesheet", href="/css/interfaz.css")
+        link(rel="stylesheet", href="/css/materialize.min.css")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous")
+        script(src="/js/jquery-3.4.1.js")
+        script(src="/js/materialize.min.js")
+        style(type='text/css').
+            * {
+
+                margin: 0;
+                margin-top: 0px;
+                margin-right: 0px;
+                margin-bottom: 0px;
+                margin-left: 0px;
+                padding: 0;
+                padding-top: 0px;
+                padding-right: 0px;
+                padding-bottom: 0px;
+                padding-left: 0px;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+
+            }
+
+            body, button, input {
+
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: .015em;
+
+                color: #b3b3b3;
+                text-transform: none;
+                font-family: spotify-circular, spotify-circular-cyrillic, spotify-circular-arabic, spotify-circular-hebrew, Helvetica Neue, Helvetica, Arial, Hiragino Kaku Gothic Pro, Meiryo, MS Gothic, sans-serif;
+
+            }
+            html,body{
+                 max-height: 100%;
+            }
+            html{
+                scrollbar-color: hsla(0,0%,100%,.3) transparent;
+            }
+            body{
+                background-color: #181818 !important;
+            }
+            /*.s{*/
+            /*max-width: 100% !important;*/
+            /*text-align: center !important;*/
+            /*}*/
+            /*.c1{*/
+            /*    margin-top: -65px;*/
+            /*}*/
+
+            .Rootlist__playlists-header{
+                --left-sidebar-padding-left: 20px;
+                padding-top: 70px;
+                --left-sidebar-padding-right: 20px;
+
+
+                margin: 0 var(--left-sidebar-padding-right) 0 var(--left-sidebar-padding-left);
+
+
+                font-size: 11px;
+
+                line-height: 16px;
+
+                letter-spacing: .015em;
+
+
+
+                color: #b3b3b3;
+
+                text-transform: uppercase;
+
+                letter-spacing: .16em;
+            }
+            .Root__nav-bar{
+                display: -webkit-box;
+
+                display: -ms-flexbox;
+
+                display: flex;
+
+                -webkit-box-orient: vertical;
+
+                -webkit-box-direction: normal;
+
+                -ms-flex-direction: column;
+
+                flex-direction: column;
+
+                min-height: 0;
+
+                grid-area: nav-bar;
+
+                background-color: rgba(0, 0, 0, .8);
+
+                overflow-y: auto;
+
+                width: 230px;
+
+                will-change: transform;
+            }
+            .navbar-link{
+                margin-left: 16px;
+                -webkit-box-flex: 1;
+
+                -ms-flex: 1;
+
+                flex: 1;
+
+                min-width: 0;
+            }
+            .navBar-item--with-icon-left{
+                position: relative;
+            }
+            .navBar-item{
+                position: relative;
+
+                font-size: 14px;
+
+                line-height: 20px;
+
+                letter-spacing: .015em;
+
+            }
+            .asideButton-container{
+                display: -webkit-box;
+                margin-bottom: -15%;
+                display: -ms-flexbox;
+
+                display: flex;
+
+                position: relative;
+
+                right: -21%;
+                width: 78%;
+
+                -webkit-box-align: center;
+
+                -ms-flex-align: center;
+
+                align-items: center;
+
+                -webkit-box-pack: center;
+
+                -ms-flex-pack: center;
+
+                justify-content: center;
+
+                -webkit-box-orient: vertical;
+
+                -webkit-box-direction: normal;
+
+                -ms-flex-direction: column;
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+            .ca2045af78be9b69e0356564bef56441-scss{
+                width: 90% !important;
+                padding: 20px 0 !important;
+                padding-top: 0px !important;
+                padding-right: 0px !important;
+                padding-bottom: 20px !important;
+                padding-left: 100px !important;
+            }
+            nav{
+                display: block !important;
+            }
+            .f0775fccf86d4158d9982b145cb1fadf-scss{
+                text-align: center;
+            }
+            ol, ul {
+
+                list-style: none;
+                list-style-position: outside;
+                list-style-image: none;
+                list-style-type: none;
+
+            }
+            ._70aef60cb99a7cbe780a28b62977a811-scss{
+                display: inline-block;
+            }
+            ._137ec408b14ac4ea5aec6ded3d95f328-scss.be059487cfa7b71ee0f482c8e5be2b7e-scss, ._137ec408b14ac4ea5aec6ded3d95f328-scss:focus, ._137ec408b14ac4ea5aec6ded3d95f328-scss:hover
+            {
+                opacity: 1;
+            }
+            ._137ec408b14ac4ea5aec6ded3d95f328-scss{
+                outline: none;
+
+                outline-color: currentcolor;
+                outline-style: none;
+                outline-width: medium;
+
+                font-size: 12px;
+
+                line-height: 16px;
+
+                letter-spacing: .015em;
+
+
+
+
+
+                text-transform: uppercase;
+
+                letter-spacing: .16em;
+
+                color: #fff;
+
+                opacity: .6;
+
+                position: relative;
+
+                border: 0;
+                border-top-color: currentcolor;
+                border-top-style: none;
+                border-top-width: 0px;
+                border-right-color: currentcolor;
+                border-right-style: none;
+                border-right-width: 0px;
+                border-bottom-color: currentcolor;
+                border-bottom-style: none;
+                border-bottom-width: 0px;
+                border-left-color: currentcolor;
+                border-left-style: none;
+                border-left-width: 0px;
+                border-image-outset: 0;
+                border-image-repeat: stretch;
+                border-image-slice: 100%;
+                border-image-source: none;
+                border-image-width: 1;
+
+                display: inline-block;
+
+                margin: 10px;
+
+                margin-top: 10px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                margin-left: 10px;
+
+                padding: 5px 10px;
+
+                padding-top: 5px;
+                padding-right: 10px;
+                padding-bottom: 5px;
+                padding-left: 10px;
+
+                text-decoration: none;
+
+                text-decoration-line: none;
+                text-decoration-style: solid;
+                text-decoration-color: currentcolor;
+                text-decoration-thickness: auto;
+
+                -webkit-transition: opacity .2s linear;
+
+                transition-property: opacity;
+                transition-duration: 0.2s;
+                transition-timing-function: linear;
+                transition-delay: 0s;
+
+                transition: opacity .2s linear;
+
+                transition-property: opacity;
+                transition-duration: 0.2s;
+                transition-timing-function: linear;
+                transition-delay: 0s;
+            }
+
+            .EmptyState__message .icon {
+                margin-top: 40px;
+                margin-bottom: 40px;
+                width: 50px;
+                height: 50px;
+                fill: #fff;
+                display: inline-block
+            }
+
+
+            .EmptyState__message .icon svg {
+                width: 50px;
+                height: 50px
+            }
+            .EmptyState__message{
+                text-align: center;
+                margin-bottom: 64px !important;
+            }
+            .EmptyState__message .cta-button {
+                margin-top: 36px;
+            }
+
+            .EmptyState__title {
+                font-size: 48px;
+                line-height: 56px;
+                letter-spacing: -.005em;
+                color: #fff;
+                text-transform: none;
+                text-align: center;
+                margin-bottom: 36px;
+                letter-spacing: normal;
+                line-height: 78px
+            }
+
+            .EmptyState__subtitle {
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: .015em;
+                color: #b3b3b3;
+                text-transform: none;
+            }
+
+            .EmptyState__message .cta-button {
+                margin-top: 36px
+            }
+
+            elemento {
+
+            }
+
+            .EmptyState__message .cta-button {
+
+                margin-top: 36px;
+
+            }
+
+            .btn.btn-white {
+
+                background: #fff;
+
+                color: #000;
+                padding: 11px 44px;
+
+            }
+
+            .btn {
+
+                font-size: 11px;
+                line-height: 16px;
+                letter-spacing: .015em;
+
+                color: #b3b3b3;
+                text-transform: uppercase;
+                letter-spacing: .16em;
+                -webkit-transition: none 33ms cubic-bezier(.3, 0, .7, 1);
+                transition: none 33ms cubic-bezier(.3, 0, .7, 1);
+                transition-property: none;
+                -webkit-transition-property: all;
+                transition-property: all;
+                color: #fff;
+                margin-top: 16px;
+                display: inline-block;
+                margin-bottom: 0;
+                text-align: center;
+                -ms-touch-action: manipulation;
+                touch-action: manipulation;
+                background-image: none;
+                border: 0;
+                border-radius: 500px;
+                padding: 13px;
+                min-width: 130px;
+                white-space: normal;
+                will-change: transform;
+                line-height: 1.6;
+                vertical-align: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+
+            }
+
+            .btn:not(.disabled):focus,
+            .btn:not(.disabled):hover {
+                outline: none;
+                -webkit-transition: none 33ms cubic-bezier(.3, 0, 0, 1);
+                transition: none 33ms cubic-bezier(.3, 0, 0, 1);
+                -webkit-transition-property: all;
+                transition-property: all;
+                -webkit-transform: scale(1.06);
+                transform: scale(1.06)
+            }
+
+            .col-xs-12 {
+
+                width: 100%;
+                float: left;
+                position: relative;
+
+                min-height: 1px;
+
+                padding-left: 8px;
+
+                padding-right: 8px;
+            }
+            .pad{
+                margin-top: -97%;
+            }
+            .fo{
+                margin-top: -25px;
+            }
+
+            .contentSpacing {
+
+                padding: 0 32px;
+                margin: 0 auto;
+                max-width: 1480px;
+
+
+            }
+    body
+
+        header
+            div(class="asideButton-container")
+                nav(class="ca2045af78be9b69e0356564bef56441-scss " style = {background: '#181818'} )
+
+                    ul(class="f0775fccf86d4158d9982b145cb1fadf-scss")
+                        li(class="_70aef60cb99a7cbe780a28b62977a811-scss")
+                            div
+                                a(aria-current="page" class="_137ec408b14ac4ea5aec6ded3d95f328-scss be059487cfa7b71ee0f482c8e5be2b7e-scss" href="/collection/playlists") PLAYLISTS
+                        li(class="_70aef60cb99a7cbe780a28b62977a811-scss")
+                            div
+                        li(class="_70aef60cb99a7cbe780a28b62977a811-scss")
+                            div
+                                a(class="_137ec408b14ac4ea5aec6ded3d95f328-scss" href="/collection/made-for-you") ESPECIALMENTE PARA TI
+
+                        li(class="_70aef60cb99a7cbe780a28b62977a811-scss")
+                              div(class="GlueDropTarget")
+                                        a(class="_137ec408b14ac4ea5aec6ded3d95f328-scss" href="/collection/tracks") CANCIONES QUE TE GUSTAN
+                        li(class="_70aef60cb99a7cbe780a28b62977a811-scss")
+                                div
+                                    a(class="_137ec408b14ac4ea5aec6ded3d95f328-scss" href="/collection/albums") ÁLBUMES
+                        li(class="_70aef60cb99a7cbe780a28b62977a811-scss")
+                                div(class="GlueDropTarget")
+                                    a(class="_137ec408b14ac4ea5aec6ded3d95f328-scss" href="/collection/artists") ARTISTAS
+
+        main
+             div(class="Root__nav-bar")
+                ul(id="main-nav" class="sidenav sidenav-fixed black" )
+                    li(class="logo"):a(id="logo-container" href="/" class="brand-logo"):object(id="front-page-logo" type="image/png" data="/img/brand.png" height="40") Spotify
+
+                    li(class="menu")
+                        div(class="navBar-item navBar-item--with-icon-left")
+                        //a(href="#" class="white-text "):svg(viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg"):path(d="M 256.274 60.84 L 84.324 166.237 L 84.324 443.063 L 193.27 443.063 L 193.27 293.73 L 320.228 293.73 L 320.228 443.063 L 428.222 443.063 L 428.222 165.476 L 256.274 60.84 Z M 256.274 35.95 L 448.452 149.145 L 448.452 464.395 L 300 464.395 L 300 315.062 L 213.499 315.062 L 213.499 464.395 L 64.095 464.395 L 64.095 150.161 L 256.274 35.95 Z" fill="currentColor"):svg(viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg"):path(d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z" fill="currentColor"):span(class="navbar-link") Inicio
+                        a(href="#" class="white-text "):i(class="fas fa-home white-text"):b Inicio
+                        a(href="#" class="white-text"):i(class="fas fa-search white-text"):b Buscar
+                        a(href="#" class="white-text selected"):i(class="fas fa-book-open white-text"):b Tu biblioteca
+                    h2(class="Rootlist__playlists-header") PlayLists
+
+        section.contentSpacing
+
+                    div(class="row  ")
+                        div(class="EmptyState__message col-xs-12 pad  ")
+                                    div(class="icon")
+                                        svg(width="51" height="52" viewBox="0 0 51 52" xmlns="http://www.w3.org/2000/svg")
+                                                     title Add Playlist Icon
+                                                     path(d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10c0-5.524-4.477-10-10-10zm7 11h-6v6H9v-6H3V9h6V3h2v6h6v2zm7.75-3.655c.118.653.188 1.32.217 2L49 4.234v27.03c-1.65-2.044-4.174-3.356-7-3.356-4.962 0-9 4.037-9 9 0 4.962 4.038 9 9 9s9-4.038 9-9V1.764l-26.25 5.58zM42 43.91c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm-25-6.556C15.348 35.31 12.826 34 10 34c-4.963 0-9 4.037-9 9 0 4.96 4.037 9 9 9s9-4.04 9-9V21.97c-.632.476-1.296.912-2 1.285v14.097zM10 50c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7c0 3.858-3.14 7-7 7z" fill="currentColor" fill-rule="evenodd")
+                                    h1(class="EmptyState__title") Crea tu primera playlist
+                                    h4(class="EmptyState__subtitle") Te ayudamos a hacer tu casete recopilatorio perfecto (¡y sin casete!).
+                                    button(class="btn btn-white cta-button") Crear nueva playlist
+        footer(class="page-footer fo")
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
