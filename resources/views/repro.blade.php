@@ -10,24 +10,14 @@
 
     <link rel="stylesheet" href="/css/interfaz.css">
     <link rel="stylesheet" href="/css/materialize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
-          integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
     <script src="/js/jquery-3.4.1.js"></script>
     <script src="/js/materialize.min.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap">
     <style>
-        #band:hover {
-            color: #fff;
+        #band:hover{
+            color: #ffffff !important;
         }
-
-        #band:link {
-            color: #b3b3b3;
-        }
-
-        #band:visited {
-            color: #b3b3b3;
-        }
-
     </style>
 </head>
 
@@ -61,19 +51,23 @@
                 Cinematics
                 <br> (Extended edition)</h4>
             <div>
-                <a id="band" href="#" style="/*color: #b3b3b3;*/">set it off</a>
+                <a id="band" href="#" style="color: #b3b3b3;">set it off</a>
             </div>
             <div style="margin-top: 10px;">
                 {{--            <a class="waves-effect waves-light btn" href="#">reproducir</a>--}}
-                <button type="button" class="btn green btn-flat" style="border-radius: 100px;">reproducir</button>
+                <button type="button" class="btn green btn-flat" style="border-radius: 100px; color: #ffffff;">reproducir</button>
+            </div>
+            <div>
+                <p style="color: #b3b3b3b3;">2012 . 15 canciones</p>
+            </div>
+            <div>
+                <a href="#" style="margin-inline: 20px"><img src="img/corazon.png" alt="" style="width: 20px; height: 20px;"></a>
+                <i class="material-icons" style="margin-inline: 20px; color: #b3b3b3; width: 20px;height: 20px;">more_horiz</i>
             </div>
         </div>
         <div class="container col s7">
-            <a class="waves-effect waves-light btn" href="#">reproducir1</a>
-            <h5 class="white-text">Links</h5>
-
             <ul class="collection" style="border-width: 0px">
-                <li class="collection-item row" style="background-color: #181818;color: #fff;">
+                <a href="#"><li class="collection-item row" style="background-color: #181818;color: #fff;">
                     <div class="col s1">
                         <img src="img/nota-musical.png" alt="" style="width: 20px; height: 20px">
                     </div>
@@ -84,8 +78,8 @@
                         <div class="col s12" style="color: grey; font-family: 'Montserrat';">set it off</div>
                     </div>
                     <div class="col s1">3:22</div>
-                </li>
-                <li class="collection-item row" style="background-color: #181818;color: #fff;">
+                    </li></a>
+                <a href="#"><li class="collection-item row" style="background-color: #181818;color: #fff;">
                     <div class="col s1">
                         <img src="img/nota-musical.png" alt="" style="width: 20px; height: 20px">
                     </div>
@@ -96,8 +90,8 @@
                         <div class="col s12" style="color: grey; font-family: 'Montserrat';">set it off</div>
                     </div>
                     <div class="col s1">3:22</div>
-                </li>
-                <li class="collection-item row" style="background-color: #181818;color: #fff;">
+                        </li></a>
+                <a href="#"><li class="collection-item row" style="background-color: #181818;color: #fff;">
                     <div class="col s1">
                         <img src="img/nota-musical.png" alt="" style="width: 20px; height: 20px">
                     </div>
@@ -108,8 +102,8 @@
                         <div class="col s12" style="color: grey; font-family: 'Montserrat';">set it off</div>
                     </div>
                     <div class="col s1">3:22</div>
-                </li>
-                <li class="collection-item row" style="background-color: #181818;color: #fff;">
+                </li></a>
+                <a href="#"><li class="collection-item row" style="background-color: #181818;color: #fff;">
                     <div class="col s1">
                         <img src="img/nota-musical.png" alt="" style="width: 20px; height: 20px">
                     </div>
@@ -120,8 +114,8 @@
                         <div class="col s12" style="color: grey; font-family: 'Montserrat';">set it off</div>
                     </div>
                     <div class="col s1">3:22</div>
-                </li>
-                <li class="collection-item row" style="background-color: #181818;color: #fff;">
+                    </li></a>
+                <a href="#"><li class="collection-item row" style="background-color: #181818;color: #fff;">
                     <div class="col s1">
                         <img src="img/nota-musical.png" alt="" style="width: 20px; height: 20px">
                     </div>
@@ -132,8 +126,8 @@
                         <div class="col s12" style="color: grey; font-family: 'Montserrat';">set it off</div>
                     </div>
                     <div class="col s1">3:22</div>
-                </li>
-                <li class="collection-item row" style="background-color: #181818;color: #fff;">
+                    </li></a>
+                <a href="#"><li class="collection-item row" style="background-color: #181818;color: #fff;">
                     <div class="col s1">
                         <img src="img/nota-musical.png" alt="" style="width: 20px; height: 20px">
                     </div>
@@ -144,8 +138,8 @@
                         <div class="col s12" style="color: grey; font-family: 'Montserrat';">set it off</div>
                     </div>
                     <div class="col s1">3:22</div>
-                </li>
-                <li class="collection-item row" style="background-color: #181818;color: #fff;">
+                    </li></a>
+                <a href="#"><li class="collection-item row" style="background-color: #181818;color: #fff;">
                     <div class="col s1">
                         <img src="img/nota-musical.png" alt="" style="width: 20px; height: 20px">
                     </div>
@@ -156,7 +150,7 @@
                         <div class="col s12" style="color: grey; font-family: 'Montserrat';">set it off</div>
                     </div>
                     <div class="col s1">3:22</div>
-                </li>
+                    </li></a>
             </ul>
         </div>
     </main>
