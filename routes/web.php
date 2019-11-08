@@ -12,17 +12,18 @@
 */
 
 Route::get('/', function () {
-    return view('interfaz');
+    return view('welcome');
 });
 
 Route::get('/spotify', function () {
     return view('spotify');
 });
-
-Route::get('/reproductor',function (){
+route::get('/reproductor',function (){
     return view('repro');
 });
-
-Route::get('/browse/featured',function (){
+route::get('/interfaz',function (){
     return view('interfaz');
+});
+route::get('/collection/playlists',function (){
+    return view('biblioteca');
 });
