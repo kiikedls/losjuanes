@@ -97,6 +97,7 @@ a.option {
 }
 
 .categories div a {
+	margin-bottom: 0 !important;
 	color: #a3a3a3;
 }
 
