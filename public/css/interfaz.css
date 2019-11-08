@@ -17,6 +17,11 @@ body {
 	background-color: #181818;
 }
 
+html {
+	scrollbar-color: hsla(0,0%,100%,.3) transparent;
+	scrollbar-width: auto;
+}
+
 main {
 	flex: 1;
 	height: 86vh;
@@ -101,12 +106,6 @@ a.option {
 	width: 100%;
 	margin-left: -8px !important;
 	margin-right: -8px !important;
-	margin-bottom: 120px !important;
-}
-
-.img-container figure {
-	height: 164px;
-	margin: 0px;
 }
 
 .img-container figcaption {
@@ -115,7 +114,6 @@ a.option {
 	font-weight: bold;
 	font-size: 14px;
 	margin-left: 8px;
-	margin-top: -2px;
 }
 
 .img-container img {
@@ -132,7 +130,7 @@ a.option {
 }
 
 .imgs-head .description {
-	margin-bottom: 0;
+	margin: 0;
 }
 
 .imgs-head .option {
@@ -145,8 +143,7 @@ a.option {
 
 .title {
 	font-size: 36px;
-	margin-bottom: -16px;
-	margin-top: 0px !important;
+	margin: 0 !important;
 }
 
 .option:hover, #main-nav li.menu a:hover, #main-nav li.menu a:hover i {
@@ -176,7 +173,12 @@ a.option {
 }
 
 .categories {
-	margin-top: 34px;
+	margin-top: 32px;
+	margin-left: 40px !important;
+}
+
+.categories a {
+	margin-right: 40px;
 }
 
 .main-container {

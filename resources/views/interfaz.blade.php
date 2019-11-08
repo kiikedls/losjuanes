@@ -38,14 +38,12 @@
 		</ul>
 
 		<main class="content">
-			<div class="container">
-				<div class="row center-align categories">
-					<div class="col s2"><a class="selected option" href="#">SELECCIONADOS</a></div>
-					<div class="col s2"><a class="option" href="#">PODCASTS</a></div>
-					<div class="col s4"><a class="option" href="#">GÉNEROS Y ESTADOS DE ÁNIMO</a></div>
-					<div class="col s2"><a class="option" href="#">NOVEDADES</a></div>
-					<div class="col s2"><a class="option" href="#">DESCUBRIR</a></div>
-				</div>
+			<div class="row categories">
+				<a class="selected option" href="#">SELECCIONADOS</a>
+				<a class="option" href="#">PODCASTS</a>
+				<a class="option" href="#">GÉNEROS Y ESTADOS DE ÁNIMO</a>
+				<a class="option" href="#">NOVEDADES</a>
+				<a class="option" href="#">DESCUBRIR</a>
 			</div>
 
 			<div style="margin-left: 20px; margin-right: 20px;">
@@ -57,30 +55,30 @@
 					<a href="#" class="option">VER MÁS</a>
 				</div>
 				<div class="row img-container center-align">
-					<figure>
+					<a href="#">
 						<img src="/img/main1/ini1.jpg" alt="">
 						<figcaption>Música instrumental para estudiar</figcaption>
-					</figure>
-					<figure>
+					</a>
+					<a href="#">
 						<img src="/img/main1/ini2.jpg" alt="">
 						<figcaption>Música para leer</figcaption>
-					</figure>
-					<figure>
+					</a>
+					<a href="#">
 						<img src="/img/main1/ini3.jpg" alt="">
 						<figcaption>Piano de fondo</figcaption>
-					</figure>
-					<figure>
+					</a>
+					<a href="#">
 						<img src="/img/main1/ini4.jpg" alt="">
 						<figcaption>Lo-Fi Beats</figcaption>
-					</figure>
-					<figure>
+					</a>
+					<a href="#">
 						<img src="/img/main1/ini5.jpg" alt="">
 						<figcaption>Tarea Casual</figcaption>
-					</figure>
-					<figure>
+					</a>
+					<a href="#">
 						<img src="/img/main1/ini6.jpg" alt="">
 						<figcaption>Concentración perfecta</figcaption>
-					</figure>
+					</a>
 				</div>
 
 				<div class="imgs-head">
@@ -91,30 +89,22 @@
 					<a href="#" class="option">VER MÁS</a>
 				</div>
 				<div class="row img-container center-align">
-					<figure>
-						<img src="/img/main1/ini1.jpg" alt="">
-						<figcaption>Música instrumental para estudiar</figcaption>
-					</figure>
-					<figure>
-						<img src="/img/main1/ini2.jpg" alt="">
-						<figcaption>Música para leer</figcaption>
-					</figure>
-					<figure>
+					<a href="#">
 						<img src="/img/main1/ini3.jpg" alt="">
-						<figcaption>Piano de fondo</figcaption>
-					</figure>
-					<figure>
+						<figcaption>Lorem ipsum</figcaption>
+					</a>
+					<a href="#">
+						<img src="/img/main1/ini2.jpg" alt="">
+						<figcaption>Lorem ipsum</figcaption>
+					</a>
+					<a href="#">
 						<img src="/img/main1/ini4.jpg" alt="">
-						<figcaption>Lo-Fi Beats</figcaption>
-					</figure>
-					<figure>
-						<img src="/img/main1/ini5.jpg" alt="">
-						<figcaption>Tarea Casual</figcaption>
-					</figure>
-					<figure>
-						<img src="/img/main1/ini6.jpg" alt="">
-						<figcaption>Concentración perfecta</figcaption>
-					</figure>
+						<figcaption>Lorem ipsum</figcaption>
+					</a>
+					<a href="#">
+						<img src="/img/main1/ini1.jpg" alt="">
+						<figcaption>Lorem ipsum</figcaption>
+					</a>
 				</div>
 
 				<div class="imgs-head">
@@ -124,30 +114,30 @@
 					<a href="#" class="option">VER MÁS</a>
 				</div>
 				<div class="row img-container center-align">
-					<figure>
+					<a href="#">
 						<img src="/img/main1/ini1.jpg" alt="">
-						<figcaption>Música instrumental para estudiar</figcaption>
-					</figure>
-					<figure>
+						<figcaption>Lorem ipsum</figcaption>
+					</a>
+					<a href="#">
 						<img src="/img/main1/ini2.jpg" alt="">
-						<figcaption>Música para leer</figcaption>
-					</figure>
-					<figure>
+						<figcaption>Lorem ipsum</figcaption>
+					</a>
+					<a href="#">
 						<img src="/img/main1/ini3.jpg" alt="">
-						<figcaption>Piano de fondo</figcaption>
-					</figure>
-					<figure>
+						<figcaption>Lorem ipsum</figcaption>
+					</a>
+					<a href="#">
 						<img src="/img/main1/ini4.jpg" alt="">
-						<figcaption>Lo-Fi Beats</figcaption>
-					</figure>
-					<figure>
+						<figcaption>Lorem ipsum</figcaption>
+					</a>
+					<a href="#">
 						<img src="/img/main1/ini5.jpg" alt="">
-						<figcaption>Tarea Casual</figcaption>
-					</figure>
-					<figure>
+						<figcaption>Lorem ipsum</figcaption>
+					</a>
+					<a href="#">
 						<img src="/img/main1/ini6.jpg" alt="">
-						<figcaption>Concentración perfecta</figcaption>
-					</figure>
+						<figcaption>Lorem ipsum</figcaption>
+					</a>
 				</div>
 
 				<div class="imgs-head">
@@ -157,30 +147,54 @@
 					<a href="#" class="option">VER MÁS</a>
 				</div>
 				<div class="row img-container center-align">
-					<figure>
+					<a href="#">
 						<img src="/img/main1/ini1.jpg" alt="">
-						<figcaption>Música instrumental para estudiar</figcaption>
-					</figure>
-					<figure>
+						<figcaption>Lorem ipsum</figcaption>
+					</a>
+					<a href="#">
 						<img src="/img/main1/ini2.jpg" alt="">
-						<figcaption>Música para leer</figcaption>
-					</figure>
-					<figure>
+						<figcaption>Lorem ipsum</figcaption>
+					</a>
+					<a href="#">
 						<img src="/img/main1/ini3.jpg" alt="">
-						<figcaption>Piano de fondo</figcaption>
-					</figure>
-					<figure>
+						<figcaption>Lorem ipsum</figcaption>
+					</a>
+					<a href="#">
 						<img src="/img/main1/ini4.jpg" alt="">
-						<figcaption>Lo-Fi Beats</figcaption>
-					</figure>
-					<figure>
+						<figcaption>Lorem ipsum</figcaption>
+					</a>
+					<a href="#">
 						<img src="/img/main1/ini5.jpg" alt="">
-						<figcaption>Tarea Casual</figcaption>
-					</figure>
-					<figure>
+						<figcaption>Lorem ipsum</figcaption>
+					</a>
+					<a href="#">
 						<img src="/img/main1/ini6.jpg" alt="">
-						<figcaption>Concentración perfecta</figcaption>
-					</figure>
+						<figcaption>Lorem ipsum</figcaption>
+					</a>
+				</div>
+
+				<div class="imgs-head">
+					<div>
+						<h4 class="white-text title"><b>Nuevos episodios de podcast</b></h4>
+					</div>
+				</div>
+				<div class="row img-container center-align">
+					<a href="#">
+						<img src="/img/main1/pod.png" alt="">
+						<figcaption>Explorar podcasts</figcaption>
+					</a>
+				</div>
+
+				<div class="imgs-head">
+					<div>
+						<h4 class="white-text title"><b>100 % personal</b></h4>
+					</div>
+				</div>
+				<div class="row img-container center-align">
+					<a href="#">
+						<img src="/img/main1/fav.png" alt="">
+						<figcaption>Liked songs</figcaption>
+					</a>
 				</div>
 			</div>
 		</main>
