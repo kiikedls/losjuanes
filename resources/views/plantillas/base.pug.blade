@@ -1,0 +1,50 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='icon' href='https://open.scdn.co/static/images/favicon.png')
+  title Spotify - Inicio
+  | @yield('extraCSS')
+  link(rel='stylesheet' href='/css/interfaz.css')
+  link(rel='stylesheet' href='/css/materialize.min.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' integrity='sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=' crossorigin='anonymous')
+  script(src='/js/jquery-3.4.1.js')
+  script(src='/js/materialize.min.js')
+.main-container
+  ul#main-nav.sidenav.sidenav-fixed.black
+    li.logo
+      a#logo-container.brand-logo(href='/')
+        object#front-page-logo(type='image/png' data='/img/brand.png' height='40') Spotify
+    li.menu
+      a.selected(href='#')
+        i.fas.fa-home
+        b Inicio
+      a(href='#')
+        i.fas.fa-search
+        b Buscar
+      a(href='#')
+        i.fas.fa-book-open
+        b Tu biblioteca
+    li.menu-bottom
+      a.waves-effect.waves-light.btn-small.btn-menu.white.black-text(style='margin-bottom: 8px;')
+        b Registrarte
+      a.waves-effect.waves-light.btn-small.btn-menu.btn-menu-dark
+        b Iniciar sesi&oacute;n
+      a.center-align.priv-info(href='#' style='margin-bottom: 4px;') Cookies
+      hr.center-align(style='width: 10px;')
+      a.center-align.priv-info(href='#' style='margin-top: -14px;') Privacidad
+  main.content
+    | @yield('content')
+footer.page-footer
+script(type='text/javascript').
+  var categories = $('.categories a'),
+  	menuOptions = $('.menu a');
+  categories.click(function() {
+  	categories.removeClass('selected');
+  	$(this).addClass('selected');
+  });
+  menuOptions.click(function() {
+  	menuOptions.removeClass('selected');
+  	$(this).addClass('selected');
+  });
+| @yield('extraJS')
