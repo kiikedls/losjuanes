@@ -1,0 +1,125 @@
+doctype html
+head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='icon' href='https://open.scdn.co/static/images/favicon.png')
+    title Spotify - Tu biblioteca
+    link(rel='stylesheet' href='/css/interfaz.css')
+    link(rel='stylesheet' href='/css/biblioteca.css')
+    link(rel='stylesheet' href='/css/materialize.min.css')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' integrity='sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=' crossorigin='anonymous')
+    script(src='/js/jquery-3.4.1.js')
+    script(src='/js/materialize.min.js')
+    style(type='text/css').
+        .btn {
+            font-size: 11px;
+            line-height: 16px;
+            letter-spacing: .015em;
+            color: #b3b3b3;
+            text-transform: uppercase;
+            letter-spacing: .16em;
+            -webkit-transition: none 33ms cubic-bezier(.3, 0, .7, 1);
+            transition: none 33ms cubic-bezier(.3, 0, .7, 1);
+            transition-property: none;
+            -webkit-transition-property: all;
+            transition-property: all;
+            color: #fff;
+            margin-top: 16px;
+            display: inline-block;
+            margin-bottom: 0;
+            text-align: center;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            background-image: none;
+            border: 0;
+            border-radius: 500px;
+            padding: 13px;
+            min-width: 130px;
+            white-space: normal;
+            will-change: transform;
+            line-height: 1.6;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+        }
+
+        .btn.btn-white {
+
+            background: #fff;
+
+            color: #000;
+            padding: 11px 44px;
+
+        }
+
+        .ci {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+.main-container
+    ul#main-nav.sidenav.sidenav-fixed.black
+        li.logo
+            a#logo-container.brand-logo(href='/')
+                object#front-page-logo(type='image/png' data='/img/brand.png' height='40') Spotify
+        li.menu
+            a.selected(href='#')
+                i.fas.fa-home
+                b Inicio
+            a(href='#')
+                i.fas.fa-search
+                b Buscar
+            a(href='#')
+                i.fas.fa-book-open
+                b Tu biblioteca
+
+            h2.Rootlist__playlists-header PlayLists
+
+            button.CreatePlaylistButton.elemento
+                svg.CreatePlaylistButton__svg(shape-rendering='crispEdges' viewbox='0 0 36 36')
+                    path.CreatePlaylistButton__svg-plus-path(d='m28 20h-8v8h-4v-8h-8v-4h8v-8h4v8h8v4z')
+                span.CreatePlaylistButton Crear playlist
+
+
+        li.menu-bottom.center-align
+                div.ci
+                    .navBar-item.navBar-item--with-icon-left.NavBar__download-item
+                            a.link-subtle.navBar-link.ellipsis-one-line(href='/download')
+                                .navBar-link-text-with-icon-wrapper
+                                    .icon.download-icon.NavBar__icon
+                                        svg(viewbox='0 0 20 20' xmlns='http://www.w3.org/2000/svg')
+                                            title Download icon
+                                            path(d='M12 11.657V6h-1v5.65L9.076 9.414l-.758.65 3.183 3.702 3.195-3.7-.758-.653L12 11.657zM11.5 2C7.358 2 4 5.358 4 9.5c0 4.142 3.358 7.5 7.5 7.5 4.142 0 7.5-3.358 7.5-7.5C19 5.358 15.642 2 11.5 2zm0 14C7.916 16 5 13.084 5 9.5S7.916 3 11.5 3 18 5.916 18 9.5 15.084 16 11.5 16z' fill='currentColor' fill-rule='evenodd')
+                                    span.navbar-link__text.center-align Instalar app
+                            .sessionInfo
+                              P Usuario1
+    main.content
+        .row.categories
+                a.selected.option(href='#') PLAYLISTS
+                a.option(href='#') ESPECIALMENTE PARA TI
+                a.option(href='#') CANCIONES QUE TE GUSTAN
+                a.option(href='#') ÁLBUMES
+                a.option(href='#') ARTISTAS
+                a.option(href='#') PODCASTS
+
+
+        div.Rootlist__playlists-header.EmptyState__message
+                | @yield('content')
+footer.page-footer
+script(type='text/javascript').
+    var categories = $('.categories a'),
+        menuOptions = $('.menu a');
+    categories.click(function() {
+        categories.removeClass('selected');
+        $(this).addClass('selected');
+    });
+    menuOptions.click(function() {
+        menuOptions.removeClass('selected');
+        $(this).addClass('selected');
+    });
+
+
