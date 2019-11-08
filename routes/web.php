@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/browse/featured');
 });
 
 Route::get('/iniciarsesion', function () {
@@ -23,11 +23,19 @@ Route::get('/registrarce', function () {
     return view('registrarce');
 });
 
-Route::get('/browse/featured', function() {
+Route::get('/reproductor',function (){
+    return view('repro');
+});
+
+Route::get('/browse/featured',function (){
     return view('interfaz');
 });
 
 
-Route::post('/login', 'Usuarios@IniciarSesion');
-Route::post('/register', 'Usuarios@Registrarusuario');
+
+
+
+
+Route::get('/collection/playlists',function (){
+    return view('biblioteca');
 
