@@ -1,0 +1,101 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='description' content='')
+  meta(name='viewport' ,='' content='width-device-width, initial-scale-1.0')
+  meta(http-equiv='X-UA-Compatible' ,='' content='ie-edge')
+  title Registrarce - Spotify
+  link(href='https://fonts.googleapis.com/icon?family=Material+Icons' ,='' rel='stylesheet')
+  link(rel='shortcut icon' ,='' href='img/SpotifyN.ico')
+  link(rel='stylesheet' ,='' href='css/materialize.css')
+  link(rel='stylesheet' ,='' type='text/css' href='js/materialize.js')
+  link(rel='stylesheet' ,='' type='text/css' href='css/animate.css')
+  script(src='js/jquery-3.4.1.js')
+  link(rel='stylesheet' type='text/css' href='css/registrarce.css')
+  link(href='https://fonts.googleapis.com/css?family=Montserrat:700&display=swap' ,='' rel='stylesheet')
+nav#navegador
+  .nav-wrapper
+    a.brand-logo.center(href='#')
+      img#Logo(src='img/Logonavbar.PNG' alt='LogoSpotify')
+.row
+  .col.s12.center
+    button.btn.fbbtn(type='submit' name='loginfacebook' text='Inicia sesion con spotify')
+      p#psafb Registrarte con
+      p facebook
+  .col.s12.center
+    img(src='img/barraconlao.PNG' alt='barra')
+    form(action='/register' method='POST' accept-charset='utf-8')
+      | {{ csrf_field() }}
+      .col.s12
+        p.center
+          | Reg&iacute;strate con tu direcci&oacute;n de email
+      .col.s12
+        input.col.s4.offset-s4.forminputs.grey-text(type='email' name='email' placeholder='Email')
+      .col.s12
+        input.col.s4.offset-s4.forminputs.grey-text(type='email' name='emailconfirmation' placeholder='Confirmar Email')
+      .col.s12
+        input.col.s4.offset-s4.forminputs.grey-text(type='password' name='contrasena' placeholder='Contraseña')
+      .col.s12
+        input.col.s4.offset-s4.forminputs.grey-text(type='text' name='comotellamas' placeholder='¿Como te llamas?')
+      .col.s12.center
+        p.col.s4.offset-s4.pnacimiento.grey-text
+          | Fecha de nacimiento
+      .col.s12
+        input.col.s1.forminputs.grey-text.btssmall.formcentrar(type='text' name='dia' value='' placeholder='Dia')
+        select.browser-default.col.s2.forminputs.grey-text.btnbig
+          option(value='0' disabled='' selected='') Mes
+          option(value='1') Enero
+          option(value='2') Febrero
+          option(value='3') Marzo
+          option(value='4') Abril
+          option(value='5') Mayo
+          option(value='6') Junio
+          option(value='7') Julio
+          option(value='8') Agosto
+          option(value='9') Septiembre
+          option(value='10') Octubre
+          option(value='11') Noviembre
+          option(value='12') Diciembre
+        input.col.s1.forminputs.grey-text.btssmall(type='text' name='año' value='' placeholder='Año')
+      .col.s12.center.radios
+        label.col.s1.offset-s4
+          input.with-gap(type='radio' name='genero' value='1')
+          span Hombre
+        label.col.s1
+          input.with-gap(type='radio' name='genero' value='2')
+          span Mujer
+        label#radnb.col.s1
+          input.with-gap(type='radio' name='genero' value='0')
+          span No binario
+      .col.s12
+        p
+          label
+            input(type='checkbox' name='terms' value='terms')
+            span.col.s5.offset-s4
+              | Compartir mis datos de registro con los proveedores de contenido de
+              | Spotify para fines de marketing.
+          br
+          br
+      .col.s12.center
+        .card.col.s3.offset-s5.robot
+          p.left
+            label
+              input(type='checkbox' name='terms' value='terms')
+              span No soy un robot
+          img.right(src='img/re-captcha.PNG' alt='barra')
+        .col.s12.center
+          p.col.s5.offset-s4.pdlf2
+            | Al hacer clic en Registrarce, acepta los 
+            a.green-text(href='#') Terminos y condiciones de Uso
+            |  de Spotify
+        .col.s12.center
+          p.col.s6.offset-s3.pdlf
+            | Para obtener mas informacion sobre como Spotify recopila, utiliza, comparte y protege sus datos personales, lea la 
+            a.green-text(href='#') Politica de Privacidad
+            |  de Spotify
+        .col.s12.center
+          button.btn.regbtn.green(type='submit' name='loginfacebook' text='Registrate') Registrate
+    .col.s12.center
+      span
+        | &iquest;Ya tienes una cuenta?
+        a.green-text(href='/iniciarsesion') iniciar sesion

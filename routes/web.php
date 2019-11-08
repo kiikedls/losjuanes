@@ -16,11 +16,11 @@ Route::get('/', function () {
 });
 
 Route::get('/iniciarsesion', function () {
-    return view('iniciodesesion');
+    return view('viewsunknown.iniciodesesion');
 });
 
 Route::get('/registrarce', function () {
-    return view('registrarce');
+    return view('viewsunknown.registrarce');
 });
 
 Route::get('/reproductor',function (){
@@ -38,7 +38,7 @@ Route::get('/browse/featured',function (){
 
 Route::get('/collection/playlists',function (){
     return view('biblioteca');
-
+});
 
 Route::post('/login', 'Usuarios@IniciarSesion');
 Route::post('/register', 'Usuarios@Registrarusuario');

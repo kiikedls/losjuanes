@@ -8,16 +8,6 @@ use Illuminate\Http\Request;
 
 class Usuarios extends Controller
 {
-    function vistaregistro()
-    {
-    	return view('registro');
-    }
-
-    function vistainiciodesesion()
-    {
-        return view('iniciaodesesion');
-    }
-
 
     function IniciarSesion(Request $request)
     {
@@ -37,7 +27,7 @@ class Usuarios extends Controller
           }
         }
       
-        return redirect('/iniciarsesion')->with("Error","Usuario y/o contraseña incorrectos");
+        return redirect('iniciarsesion')->with("Error","Usuario y/o contraseña incorrectos");
     }
 
     function Registrarusuario(Request $request)

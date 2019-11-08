@@ -1,0 +1,67 @@
+doctype html
+head
+  head
+    meta(charset='utf-8')
+    meta(name='description' content='')
+    meta(name='viewport' ,='' content='width-device-width, initial-scale-1.0')
+    meta(http-equiv='X-UA-Compatible' ,='' content='ie-edge')
+    title Iniciar sesion - Spotify
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons' ,='' rel='stylesheet')
+    link(rel='shortcut icon' ,='' href='img/SpotifyN.ico')
+    link(rel='stylesheet' ,='' href='css/materialize.css')
+    link(rel='stylesheet' ,='' type='text/css' href='js/materialize.js')
+    link(rel='stylesheet' ,='' type='text/css' href='css/animate.css')
+    script(src='js/jquery-3.4.1.js')
+    link(rel='stylesheet' type='text/css' href='css/iniciarsesion.css')
+    link(href='https://fonts.googleapis.com/css?family=Montserrat:700&display=swap' ,='' rel='stylesheet')
+nav#navegador
+  .nav-wrapper
+    a.brand-logo.center(href='#')
+      img#Logo(src='img/Logonavbar.PNG' alt='LogoSpotify')
+|     @if(Session::has(&apos;Error&apos;))                                 
+div
+  strong {{Session::get(&quot;Error&quot;)}}
+|     @endif
+.row
+  .col.s12.center
+    p.center  Para continuar, inicia sesi&oacute;n en Spotify
+  br
+  form(action='iniciodesesion_submit' method='get' accept-charset='utf-8')
+    .col.s12.center
+      button.btn.regbtn(type='submit' name='loginfacebook') INICIAR CON FACEBOOK
+  .col.s12.center
+    img(src='img/barraconlao.PNG' alt='barra')
+    form(action='{{ url(' method='POST' accept-charset='utf-8')
+      | {{ csrf_field() }}
+      .col.s12
+        input.col.s4.offset-s4.forminputs.grey-text(type='text' name='userinput' placeholder='Correo electronico o nombre de usuario')
+      .col.s12
+        input.col.s4.offset-s4.forminputs.grey-text(type='password' name='paswordninput' placeholder='Contrasena')
+      .col.s12
+        p
+          label
+            input(type='checkbox' name='terms' value='terms')
+            span.col.s2.offset-s4.grey-text
+              span#rememberme Recordarme
+        button.btn.iniciarsesbtn.green.col.s3(type='submit' name='loginfacebook' text='Inicia sesion con spotify')
+          p#psafb Iniciar
+          p Sesion
+    .col.s12
+      p.center
+        a.green-text(href='#') &iquest;Has olvidado tu contrase&ntilde;a?
+    .col.s12.center
+      img(src='img/barraconlao.PNG' alt='barra')
+      .col.s12.center
+        p.center &iquest;No tienes cuenta?
+      form(action='{{ url(' method='get' accept-charset='utf-8')
+        .col.s12.center
+          button.btn.spotbtn(type='submit' name='loginfacebook') REGISTRATE EN SPOTIFY
+      .col.s12
+        span#span-foter.center.grey-text Si haces clic en &quot;Acceder con Facebook&quot; y no eres usuario de Spotify, quedaras
+        br
+        span#span-foter.center.grey-text
+          | registrado y aceptaras los 
+          a.green-text(href='#')  Terminos y Condiciones 
+          | y la 
+          a.greeen-text(href='#') Politica de Privacidad
+          |  de Spotify
