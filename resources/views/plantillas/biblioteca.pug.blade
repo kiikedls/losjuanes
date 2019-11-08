@@ -111,15 +111,15 @@ head
                 | @yield('content')
 footer.page-footer
 script(type='text/javascript').
-    var categories = $('.categories a'),
-        menuOptions = $('.menu a');
-    categories.click(function() {
-        categories.removeClass('selected');
-        $(this).addClass('selected');
-    });
-    menuOptions.click(function() {
-        menuOptions.removeClass('selected');
-        $(this).addClass('selected');
-    });
+  var categories = $('.categories a'),
+  	menuOptions = $('.menu a');
+  categories.click(function() {
+  	categories.removeClass('selected');
+  	$(this).addClass('selected');
+  });
+  menuOptions.click(function() {
+  	menuOptions.removeClass('selected');
+  	$(this).addClass('selected');
+  });
 
 
