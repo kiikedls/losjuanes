@@ -39,3 +39,7 @@ Route::get('/browse/featured',function (){
 Route::get('/collection/playlists',function (){
     return view('biblioteca');
 
+
+Route::post('/login', 'Usuarios@IniciarSesion');
+Route::post('/register', 'Usuarios@Registrarusuario');
+
