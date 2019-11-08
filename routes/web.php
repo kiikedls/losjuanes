@@ -15,10 +15,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/spotify', function () {
-    return view('spotify');
+Route::get('/iniciarsesion', function () {
+    return view('iniciodesesion');
+});
+
+Route::get('/registrarce', function () {
+    return view('registrarce');
 });
 
 Route::get('/browse/featured', function() {
     return view('interfaz');
 });
+
+
+Route::post('/login', 'Usuarios@IniciarSesion');
+Route::post('/register', 'Usuarios@Registrarusuario');
+

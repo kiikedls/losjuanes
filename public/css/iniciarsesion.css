@@ -36,9 +36,88 @@ body{
     border-width:2px;
     border-color: gray;
   }
-  div p{
+  .fbbtn{
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 14px;
+    border-radius: 500px;
+    height: 62px;
+    width: 250px !important;
   }
+  .monsterrat{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+  }
+  .forminputs{
+    margin-bottom: 18px;
+    padding-left: 11.25px !important;
+    border: 1px solid lightgrey !important;
+  }
+  .pnacimiento{
+    text-align: left;
+  }
+  #fbp{
+    margin-top: -10px;
+  }
+  .btssmall{
+    width: 80px !important;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
+  .btnbig{
+    width: 200px !important;
+  }
+  .formcentrar{
+    margin-left: 450px !important;
+  }
+  #psafb{
+    margin-top: 5px !important;
+    margin-bottom: -30px !important;
+  } 
+  #radnb{
+    width: 200px !important;
+  }
+  .radios{
+    margin-top: 18px !important;
+  }
+  .regbtn{
+    background: #3B5998 !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    margin-bottom: 14px;
+    border-radius: 500px;
+    height: 40px;
+    width: 500px !important;
+  }
+  .spotbtn{
+    background: white !important;
+    font-family: 'Montserrat', sans-serif;
+    color: darkgrey;
+    font-size: 14px;
+    margin-bottom: 14px;
+    border-radius: 500px;
+    border-color: darkgrey;
+    height: 40px;
+    width: 500px !important;
+    border: solid;
+  }
+  .iniciarsesbtn{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 14px;
+    border-radius: 500px;
+    height: 62px;
+    width: 250px !important;
+  }
+  #rememberme{
+    margin-left: -100px !important;
+  }
+  #span-foter{
+    font-size: 10px;
+    color: grey; 
+  }
+
 
 

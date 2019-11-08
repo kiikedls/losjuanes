@@ -17,22 +17,88 @@ body{
       margin: 10px;
     }
   }
+
   #navegador{
-    background-color: white;
-    padding-top: 50px;
+    background-color: white ;
+    height: 108px; 
   }
   #navegador a{
     color: black;
   }
   #Logo{
-    margin-top: 5px;
-    height: 50px;
-    width: 120px;
+    margin-top: 10px;
+    height: 90px;
+    width: 260px;
   }
-  #registrateenfacebook{
-    height: 50px;
-    width: 120px; 
+  #toolimage{
+    margin: 20px;
+    border-style: inset;
+    border-width:2px;
+    border-color: gray;
   }
-
-
+  .fbbtn{
+    background: #3B5998 !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 14px;
+    border-radius: 500px;
+    height: 62px;
+    width: 300px !important;
+  }
+  .monsterrat{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+  }
+  .forminputs{
+    margin-bottom: 18px;
+    padding-left: 11.25px !important;
+    border: 1px solid lightgrey !important;
+  }
+  .pnacimiento{
+    text-align: left;
+  }
+  #fbp{
+    margin-top: -10px;
+  }
+  .btssmall{
+    width: 80px !important;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
+  .btnbig{
+    width: 200px !important;
+  }
+  .formcentrar{
+    margin-left: 450px !important;
+  }
+  #psafb{
+    margin-top: 5px !important;
+    margin-bottom: -30px !important;
+  } 
+  #radnb{
+    width: 200px !important;
+  }
+  .radios{
+    margin-top: 18px !important;
+  }
+  .regbtn{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 14px;
+    border-radius: 500px;
+    height: 40px;
+    width: 300px !important;
+  }  
+  .pdlf{
+    margin-left: 320px !important;
+  }
+  .pdlf2{
+    margin-left: 365px !important;
+  }
+  .robot{
+    width: 260px !important;
+    color: black !important;
+  }
 
