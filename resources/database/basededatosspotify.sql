@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `spotify`.`artistas` (
   `nombre` VARCHAR(75) NOT NULL,
   `descripcion` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE)
+  UNIQUE INDEX `id_UNIQUE` (`id`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 3
 DEFAULT CHARACTER SET = latin1;
@@ -42,8 +42,8 @@ CREATE TABLE IF NOT EXISTS `spotify`.`albumes` (
   `img` VARCHAR(75) NOT NULL DEFAULT 'defaultalbum',
   `artista` INT(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
-  INDEX `fk_album_artista_idx` (`artista` ASC) VISIBLE,
+  UNIQUE INDEX `id_UNIQUE` (`id`),
+  INDEX `fk_album_artista_idx` (`artista`),
   CONSTRAINT `fk_album_artista`
     FOREIGN KEY (`artista`)
     REFERENCES `spotify`.`artistas` (`id`)
@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `spotify`.`generos` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(75) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE)
+  UNIQUE INDEX `id_UNIQUE` (`id`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 9
 DEFAULT CHARACTER SET = latin1;
@@ -77,9 +77,9 @@ CREATE TABLE IF NOT EXISTS `spotify`.`canciones` (
   `ruta` VARCHAR(75) NOT NULL,
   `genero` INT(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `idcanciones_UNIQUE` (`id` ASC) VISIBLE,
-  INDEX `fk_canciones_album_idx` (`album` ASC) VISIBLE,
-  INDEX `fk_canciones_genero_idx` (`genero` ASC) VISIBLE,
+  UNIQUE INDEX `idcanciones_UNIQUE` (`id`),
+  INDEX `fk_canciones_album_idx` (`album`),
+  INDEX `fk_canciones_genero_idx` (`genero`),
   CONSTRAINT `fk_canciones_album`
     FOREIGN KEY (`album`)
     REFERENCES `spotify`.`albumes` (`id`)
@@ -103,9 +103,11 @@ CREATE TABLE IF NOT EXISTS `spotify`.`usuarios` (
   `nombre` VARCHAR(100) NOT NULL,
   `correo` VARCHAR(100) NOT NULL,
   `contrasena` VARCHAR(100) NOT NULL,
+  `fecha_de_nacimiento` DATE NOT NULL,
+  `genero` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `correo_UNIQUE` (`correo` ASC) VISIBLE,
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE)
+  UNIQUE INDEX `correo_UNIQUE` (`correo`) ,
+  UNIQUE INDEX `id_UNIQUE` (`id`) )
 ENGINE = InnoDB
 AUTO_INCREMENT = 2
 DEFAULT CHARACTER SET = latin1;
@@ -119,8 +121,8 @@ CREATE TABLE IF NOT EXISTS `spotify`.`favoritas` (
   `cancion` INT(11) NOT NULL,
   `usuario` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_favoritas_usuarios_idx` (`usuario` ASC) VISIBLE,
-  INDEX `fk_favoritas_canciones_idx` (`cancion` ASC) VISIBLE,
+  INDEX `fk_favoritas_usuarios_idx` (`usuario` ) ,
+  INDEX `fk_favoritas_canciones_idx` (`cancion` ) ,
   CONSTRAINT `fk_favoritas_canciones`
     FOREIGN KEY (`cancion`)
     REFERENCES `spotify`.`canciones` (`id`)
@@ -144,8 +146,8 @@ CREATE TABLE IF NOT EXISTS `spotify`.`siguiendo` (
   `usuario` INT(11) NOT NULL,
   `artista` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_siguiendo_usuario_idx` (`usuario` ASC) VISIBLE,
-  INDEX `fk_siguiendo_artista_idx` (`artista` ASC) VISIBLE,
+  INDEX `fk_siguiendo_usuario_idx` (`usuario` ) ,
+  INDEX `fk_siguiendo_artista_idx` (`artista` ) ,
   CONSTRAINT `fk_siguiendo_artista`
     FOREIGN KEY (`artista`)
     REFERENCES `spotify`.`artistas` (`id`)
