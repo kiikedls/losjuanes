@@ -60,7 +60,7 @@
 			</div>
 			<div class="col s12">
 				<input class="col s1 forminputs grey-text btssmall formcentrar" type="text" name="dia" value="" placeholder="Dia">
-				<select class="browser-default col s2 forminputs grey-text btnbig">
+				<select class="browser-default col s2 forminputs grey-text btnbig" name="mes">
 					<option value="0" disabled selected>Mes</option>
 					<option value="1">Enero</option>
 				  	<option value="2">Febrero</option>
