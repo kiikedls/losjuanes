@@ -52,10 +52,6 @@ Route::get('/collection/artists',function (){
     return view('Biblioteca.artistas');
 });
 
-Route::get('/collection/playlists',function (){
-    return view('biblioteca');
-});
-
 Route::get('/collection/podcasts',function (){
     return view('Biblioteca.podcast');
 });
