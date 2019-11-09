@@ -22,8 +22,7 @@ class Usuarios extends Controller
            
           if ($Password == $usuario->contrasena) 
           {
-            return redirect('/');
-            Session::put('usuario', $usuario);
+            return redirect('/')->with('usuario', $usuario);
           }
         }
       
