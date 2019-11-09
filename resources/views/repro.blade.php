@@ -157,11 +157,171 @@
 </div>
 
 <footer class="page-footer">
-    <audio controls="controls">
-        <source src="music/song.mp3" type="audio/mpeg">
-        tu navegador no admite este tipo de reproduccion
-    </audio>
+    <div class="row">
+        <div class="col s3 row">
+            <div class="col s3">
+                <img id="art" src="" alt="" style="width: 60px; height: 60px;">
+            </div>
+            <div class="col s6" style="font-family: 'Montserrat', sans-serif">
+                <div id="title">titulo de la cancion</div>
+                <div id="artist"><stong>set it off</stong></div>
+            </div>
+        </div>
+        <div id="player" class="center-align col s6">
+            <div id="controles">
+                <a href="#" id="prev" style="color: #b3b3b3"><i class="material-icons">skip_previous</i></a>
+                <a href="#" id="play" style="color: #b3b3b3"><i class="material-icons">play_circle_outline</i></a>
+                <a href="#" id="next" style="color: #b3b3b3"><i class="material-icons">skip_next</i></a>
+                <a href="#" id="rep" style="color: #b3b3b3"><i class="material-icons">repeat</i></a>
+                <a href="#" id="shuf" style="color: #b3b3b3"><i class="material-icons">shuffle</i></a>
+            </div>
+            <div id="playback-bar" class="row">
+                <div id="progress-time" class="col s1"></div>
+                <div id="progress-bar" class="col s6">
+                    <div class="progress" style="background-color: #424242">
+                        <div id="progress" class="determinate" style="width: 0%;background-color: darkgray"></div>
+                    </div>
+                </div>
+                <div id="playback-bar" class="col s1">
+                </div>
+            </div>
+        </div>
+        <div class="col s3">
+            <a href="#"><i class="material-icons">home</i></a>
+        </div>
+    </div>
+
+{{--    <audio controls="controls">--}}
+{{--        <source src="music/song.mp3" type="audio/mpeg">--}}
+{{--        tu navegador no admite este tipo de reproduccion--}}
+{{--    </audio>--}}
+
 </footer>
 </body>
+<script type="text/javascript">
+    var holding=false;
+    var track=document.getElementById('progress-bar');
+    var progress=document.getElementById('progress');
+    var play=document.getElementById('play');
+    var prev=document.getElementById('prev');
+    var next=document.getElementById('next');
+    var rep=document.getElementById('rep');
+    var shuf=document.getElementById('shuf');
+    var title=document.getElementById('title');
+    var artist=document.getElementById('artist');
+    var art=document.getElementById('art');
 
+    var current_track=0;
+    var song,audio,duration;
+    var playing=false;
+    var songs=[{
+        title:'Under the knife',
+        artist:'Rise against',
+        url:'music/song.mp3',
+        art:'img/ra.jpg'
+    },
+        {
+            title:'Wherever i go',
+            artist:'One republic',
+            url:'music/song2.mp3',
+            art:'img/or.jpg'
+        },
+        {
+            title:'The haunting',
+            artist:'set it off',
+            url:'music/song3.mp3',
+            art:'img/sio.jpg'
+        }];
+
+
+    window.addEventListener('load',init(),false);
+
+    function init() {
+        song=songs[current_track];
+        audio=new Audio();
+        audio.src=song.url;
+        title.textContent=song.title;
+        artist.textContent=song.artist;
+        art.src=song.art;
+    }
+
+    audio.addEventListener('timeupdate',updateTrack,false);
+    audio.addEventListener('loadedmetadata',function () {
+        duration=this.duration;
+    },false);
+    window.onmousedown=function (e) {
+        e.preventDefault();
+        if (holding) seekTrack(e);
+    }
+    window.onmouseup=function (e) {
+        holding=false;
+        console.log(holding);
+    }
+    track.onmousedown=function (e) {
+        holding=true;
+        seekTrack(e);
+        console.log(holding);
+    }
+
+    play.onclick=function () {
+        playing ? audio.pause():audio.play();
+    }
+    audio.addEventListener("pause", function () {
+        play.innerHTML = '<a href="#" id="play" style="color: #b3b3b3"><i class="material-icons">play_circle_outline</i></a>\n';
+        playing = false;
+    }, false);
+
+    audio.addEventListener("playing", function () {
+        play.innerHTML = '<a href="#" id="play" style="color: #b3b3b3"><i class="material-icons">pause_circle_outline</i></a>\n';
+        playing = true;
+    }, false);
+    next.addEventListener("click", nextTrack, false);
+    prev.addEventListener("click", prevTrack, false);
+
+    function updateTrack() {
+        curtime = audio.currentTime;
+        percent = Math.round((curtime * 100) / duration);
+        progress.style.width = percent + '%';
+    }
+
+    function seekTrack(e) {
+        event = e || window.event;
+        var x = e.pageX - player.offsetLeft - track.offsetLeft;
+        percent = Math.round((x * 100) / track.offsetWidth);
+        if (percent > 100) percent = 100;
+        if (percent < 0) percent = 0;
+        progress.style.width = percent + '%';
+        handler.style.left = percent + '%';
+        audio.play();
+        audio.currentTime = (percent * duration) / 100
+    }
+    function nextTrack() {
+        current_track++;
+        current_track = current_track % (songs.length);
+        song = songs[current_track];
+        audio.src = song.url;
+        audio.onloadeddata = function() {
+            updateInfo();
+        }
+    }
+    function prevTrack() {
+        current_track--;
+        current_track = (current_track == -1 ? (songs.length - 1) : current_track);
+        song = songs[current_track];
+        audio.src = song.url;
+        audio.onloadeddata = function() {
+            updateInfo();
+        }
+    }
+
+    function updateInfo() {
+        title.textContent = song.title;
+        artist.textContent = song.artist;
+        art.src = song.art;
+        art.onload = function() {
+            audio.play();
+        }
+    }
+
+</script>
 </html>
