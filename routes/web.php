@@ -33,27 +33,27 @@ Route::get('/browse/featured',function (){
 });
 
 Route::get('/collection/playlists',function (){
-    return view('Biblioteca.playlists');
+    return view('biblioteca.playlists');
 });
 
 Route::get('/collection/made-for-you',function (){
-    return view('Biblioteca.especialparati');
+    return view('biblioteca.especialparati');
 });
 
 Route::get('/collection/tracks',function (){
-    return view('Biblioteca.cancionesquetegustan');
+    return view('biblioteca.cancionesquetegustan');
 });
 
 Route::get('/collection/albums',function (){
-    return view('Biblioteca.albumes');
+    return view('biblioteca.albumes');
 });
 
 Route::get('/collection/artists',function (){
-    return view('Biblioteca.artistas');
+    return view('biblioteca.artistas');
 });
 
 Route::get('/collection/podcasts',function (){
-    return view('Biblioteca.podcast');
+    return view('biblioteca.podcast');
 });
 
 Route::post('/login', 'Usuarios@IniciarSesion');
