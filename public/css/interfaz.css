@@ -80,9 +80,9 @@ a.option {
 }
 
 .priv-info {
-	font-size: 12px;
-    color: #b3b3b3;
-	height: 30px;
+	font-size: 12px !important;
+    color: #b3b3b3 !important;
+	height: 30px !important;
 }
 
 .priv-info:hover {
