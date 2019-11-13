@@ -25,14 +25,30 @@ head
       a(href='/collection/playlists')
         i.fas.fa-book-open
         b Tu biblioteca
+      | @if(Session::has('usuario'))
+      p(style="margin-top: 14px;margin-bottom: -12px;margin-left: 30px;color: #a3a3a3;") PLAYLISTS
+      a(href='#')
+        i.fas.fa-plus-square(style="font-size: 34px;margin-right: 22px;")
+        b Crear playlist
+      | @endif
     li.menu-bottom
+      | @if(Session::has('usuario'))
+      a(href='#')
+        i.fas.fa-arrow-circle-down(style="color: #b3b3b3;")
+        b(style="color: #b3b3b3;") Instalar app
+      hr(style="background-color: #b3b3b3;width: 78%;margin-top: -8px;margin-bottom: -8px;")
+      a#user.white-text(href='/settings/account')
+        i.far.fa-user.white-text
+        b {{ explode('@', Session::get('usuario')->correo)[0] }}
+      | @else
       a.waves-effect.waves-light.btn-small.btn-menu.white.black-text(style='margin-bottom: 8px;', href='/registrarce')
         b Registrarte
       a.waves-effect.waves-light.btn-small.btn-menu.btn-menu-dark(href='/iniciarsesion')
         b Iniciar sesi&oacute;n
       a.center-align.priv-info(href='#' style='margin-bottom: 4px;') Cookies
       hr.center-align(style='width: 10px;')
-      a.center-align.priv-info(href='#' style='margin-top: -14px;') Privacidad
+      a.center-align.priv-info(href='#' style='margin-top: -14px;margin-bottom: 40px;') Privacidad
+      | @endif
   main.content
     | @yield('content')
 footer.page-footer

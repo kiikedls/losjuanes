@@ -11,19 +11,14 @@ class Usuarios extends Controller
 
     function IniciarSesion(Request $request)
     {
-        session_start();
         $Usuario  = $request->input("userinput");
         $Password = $request->input("paswordninput");
       
         $usuario = Usuario::where('correo', '=', $Usuario)->get()->first();
 
-        if($usuario != null)
-        {
-           
-          if ($Password == $usuario->contrasena) 
-          {
-            return redirect('/')->with('usuario', $usuario);
-          }
+        if($usuario != null && $Password == $usuario->contrasena) {
+			Session::put('usuario', $usuario);
+			return redirect('/');
         }
       
         return redirect('iniciarsesion')->with("Error","Usuario y/o contraseña incorrectos");
@@ -46,4 +41,9 @@ class Usuarios extends Controller
         return redirect('iniciarsesion');
 
     }
+
+	function cerrarSesion() {
+		Session::flush();
+		return redirect('/');
+	}
 }

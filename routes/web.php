@@ -32,6 +32,12 @@ Route::get('/browse/featured',function (){
     return view('interfaz');
 });
 
+Route::get('/settings/account', function() {
+    return view('usuario');
+});
+
+Route::get('/settings/account/logout', 'Usuarios@cerrarSesion');
+
 Route::get('/collection/playlists',function (){
     return view('biblioteca.playlists');
 });

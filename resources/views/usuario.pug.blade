@@ -1,0 +1,55 @@
+| @extends('plantillas.base')
+|
+| @section('extraCSS')
+style(type='text/css').
+  #user-options {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+  }
+  
+  .user-icon {
+    margin-top: 30px !important;
+  }
+  
+  .user-name {
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+  
+  .user-icon i {
+    font-size: 90px;
+  }
+  
+  .user-option {
+    margin-bottom: 14px;
+  }
+  
+  .details {
+    display: flex;
+    flex-direction: row;
+  }
+| @endsection
+|
+| @section('content')
+#user-options
+  h1.user-icon.center-align
+    i.far.fa-user.white-text
+  h3.user-name.white-text.center-align {{ explode('@', Session::get('usuario')->correo)[0] }}
+  a.user-option.center-align.waves-effect.waves-light.btn-small.btn-menu.btn-menu-dark(href='#') VER CUENTA
+  a.user-option.center-align.waves-effect.waves-light.btn-small.btn-menu.btn-menu-dark(href='#') SITIO WEB COMPLETO
+  a.user-option.center-align.waves-effect.waves-light.btn-small.btn-menu.btn-menu-dark(href='#') AYUDA
+  a.user-option.center-align.waves-effect.waves-light.btn-small.btn-menu.btn-menu-dark(href='/settings/account/logout') CERRAR SESIÓN
+  .details
+    a.center-align.priv-info(href='#') Información legal
+    a.center-align.priv-info(href='#') Privacidad
+    a.center-align.priv-info(href='#') Cookies
+    a.center-align.priv-info(href='#') Acerca de los anuncios
+| @endsection
+|
+| @section('extraJS')
+script(type='text/javascript').
+  $('.menu a').removeClass('selected');
+  $('#user i, #user b').css('color', '#1ed760');
+| @endsection

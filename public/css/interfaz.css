@@ -53,9 +53,9 @@ a.option {
 
 #main-nav li.menu {
     display: flex;
-    margin-left: -8px;
     font-size: 14px;
     flex-direction: column;
+	margin-left: -4px;
 }
 
 #main-nav li.menu a {
@@ -71,7 +71,6 @@ a.option {
     flex-direction: column;
     position: fixed;
     bottom: 0px;
-    margin-bottom: 40px;
     width: 100%;
 }
 
@@ -196,7 +195,7 @@ a.option {
 }
 
 #main-nav .selected {
-    border-left: 12px solid #1ed760 !important;
+    border-left: 8px solid #1ed760 !important;
 }
 
 .categories .selected {
