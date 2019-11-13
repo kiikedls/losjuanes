@@ -193,11 +193,11 @@ script(type='text/javascript').
         playing ? audio.pause():audio.play();
     }
     audio.addEventListener("pause", function () {
-        play.innerHTML = '<a href="#" id="play" style="color: #b3b3b3"><i class="material-icons">play_circle_outline</i></a>\\n';
+        play.innerHTML = '<a href="#" id="play" style="color: #b3b3b3"><i class="material-icons">play_circle_outline</i></a>';
         playing = false;
     }, false);
     audio.addEventListener("playing", function () {
-        play.innerHTML = '<a href="#" id="play" style="color: #b3b3b3"><i class="material-icons">pause_circle_outline</i></a>\\n';
+        play.innerHTML = '<a href="#" id="play" style="color: #b3b3b3"><i class="material-icons">pause_circle_outline</i></a>';
         playing = true;
     }, false);
     next.addEventListener("click", nextTrack, false);
