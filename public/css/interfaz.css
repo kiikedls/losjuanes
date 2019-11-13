@@ -1,24 +1,24 @@
 @font-face {
-    font-family: 'proxima_novaregular';
-    src: url('/font/proximanova-regular-webfont.woff2') format('woff2'),
-        url('font/proximanova-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'proxima_novaregular';
+	src: url('/font/proximanova-regular-webfont.woff2') format('woff2'),
+		url('font/proximanova-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
 *:not(i) {
-    font-family: 'proxima_novaregular' !important;
+	font-family: 'proxima_novaregular' !important;
 }
 
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
 	background-color: #121212;
 }
 
 html {
-	scrollbar-color: hsla(0,0%,100%,.3) transparent;
+	scrollbar-color: hsla(0, 0%, 100%, .3) transparent;
 	scrollbar-width: auto;
 }
 
@@ -38,23 +38,23 @@ a.option {
 }
 
 #logo-container {
-    margin-top: 24px;
+	margin-top: 24px;
 }
 
 #main-nav {
-    width: 230px;
-    height: 86vh;
-    position: inherit;
+	width: 230px;
+	height: 86vh;
+	position: inherit;
 }
 
 #main-nav li a i {
-    margin-right: 12px;
+	margin-right: 12px;
 }
 
 #main-nav li.menu {
-    display: flex;
-    font-size: 14px;
-    flex-direction: column;
+	display: flex;
+	font-size: 14px;
+	flex-direction: column;
 	margin-left: -4px;
 }
 
@@ -62,16 +62,17 @@ a.option {
 	height: 40px;
 }
 
-#main-nav li.menu a, #main-nav li.menu a i {
-    color: #b3b3b3;
+#main-nav li.menu a,
+#main-nav li.menu a i {
+	color: #b3b3b3;
 }
 
 #main-nav li.menu-bottom {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
 }
 
 #main-nav li.menu-bottom hr {
@@ -81,7 +82,7 @@ a.option {
 
 .priv-info {
 	font-size: 12px !important;
-    color: #b3b3b3 !important;
+	color: #b3b3b3 !important;
 	height: 30px !important;
 }
 
@@ -90,9 +91,9 @@ a.option {
 }
 
 #main-nav .logo {
-    margin-top: 10px;
-    margin-left: -8px;
-    margin-bottom: 12px;
+	margin-top: 10px;
+	margin-left: -8px;
+	margin-bottom: 12px;
 }
 
 .categories div a {
@@ -146,21 +147,23 @@ a.option {
 	margin: 0 !important;
 }
 
-.option:hover, #main-nav li.menu a:hover, #main-nav li.menu a:hover i {
+.option:hover,
+#main-nav li.menu a:hover,
+#main-nav li.menu a:hover i {
 	color: white !important;
 	transition: all .2s ease-in-out;
 }
 
 .btn-menu {
-    height: 34px !important;
+	height: 34px !important;
 	line-height: 24px !important;
 	margin-left: 24px !important;
 	margin-right: 24px !important;
-    padding-top: 4px !important;
+	padding-top: 4px !important;
 	background-color: #121212 !important;
 	font-size: 12px !important;
 	border: 1px solid white !important;
-  	border-radius: 16px !important;
+	border-radius: 16px !important;
 	transition: transform .03s;
 }
 
@@ -182,20 +185,95 @@ a.option {
 }
 
 .main-container {
-	display: flex; flex-direction: row;
+	display: flex;
+	flex-direction: row;
+}
+
+#account-modal {
+	width: 60% !important;
+	box-shadow: 0 2px 8px 2px rgba(0, 0, 0, .33) !important;
+	background: #000 url(https://open.scdn.co/static/images/improved-modal-bg.jpg) 50% no-repeat;
+	background-position-x: 50%;
+	background-position-y: center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-origin: padding-box;
+	background-size: 100% 100%;
+	border-radius: 12px;
+	padding: 65px 50px 50px !important;
+	padding-bottom: 0 !important;
+}
+
+#account-modal .modal-content {
+	padding: 0 !important;
+}
+
+#account-modal .card {
+	width: 334px !important;
+}
+
+#account-modal .card hr {
+	height: 1px;
+	background: #b3b3b3;
+	margin: 32px 8px 26px;
+	padding: 0;
+	border: 0;
+}
+
+#account-modal .card-content {
+	padding: 32px !important;
+}
+
+.advantage-list li {
+	display: flex;
+	flex-direction: row;
+	margin: 0 !important;
+	margin-top: 8px !important;
+}
+
+.advantage-list p {
+	margin: 0 !important;
+}
+
+.advantage-list li i {
+	align-self: center;
+	margin-right: 14px !important;
+	font-size: 16px !important;
+}
+
+.btn-login {
+	font-size: 14px !important;
+	border-radius: 500px !important;
+	width: 100% !important;
+	font-weight: 700 !important;
+	text-transform: uppercase !important;
+	letter-spacing: .16em !important;
+	padding: 11px 44px !important;
+	border: 0 !important;
+	height: auto !important;
+	line-height: 20px !important;
+}
+
+.card {
+	border-radius: 8px !important;
+}
+
+.green {
+	background-color: #1db954 !important;
 }
 
 .page-footer {
-    height: 14vh;
-    background-color: #282828 !important;
+	height: 14vh;
+	background-color: #282828 !important;
 }
 
-.selected, .selected i {
+.selected,
+.selected i {
 	color: white !important;
 }
 
 #main-nav .selected {
-    border-left: 8px solid #1ed760 !important;
+	border-left: 8px solid #1ed760 !important;
 }
 
 .categories .selected {

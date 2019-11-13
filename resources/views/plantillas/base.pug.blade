@@ -22,14 +22,18 @@ head
       a(href='#')
         i.fas.fa-search
         b Buscar
+      | @if(Session::has('usuario'))
       a(href='/collection/playlists')
         i.fas.fa-book-open
         b Tu biblioteca
-      | @if(Session::has('usuario'))
       p(style="margin-top: 14px;margin-bottom: -12px;margin-left: 30px;color: #a3a3a3;") PLAYLISTS
       a(href='#')
         i.fas.fa-plus-square(style="font-size: 34px;margin-right: 22px;")
         b Crear playlist
+      | @else
+      a.modal-trigger(href='#account-modal')
+        i.fas.fa-book-open
+        b Tu biblioteca
       | @endif
     li.menu-bottom
       | @if(Session::has('usuario'))
@@ -51,8 +55,35 @@ head
       | @endif
   main.content
     | @yield('content')
+  #account-modal.modal
+    .modal-content
+      .row
+        .col.s6
+          h5(style="font-size: 28px; margin-bottom: 34px;")
+            b.white-text.
+              Sácale todo el partido a Spotify con una cuenta gratis
+          ul.advantage-list(style='padding-right: 38px;')
+            li
+              i.fas.fa-check.white-text
+              p.white-text Sin necesidad de tarjeta de crédito, nunca
+            li
+              i.fas.fa-check.white-text
+              p.white-text Podcasts sin límites
+            li
+              i.fas.fa-check.white-text
+              p.white-text Escucha tu música favorita, con anuncios
+        .col.s6
+          .card.card-small.z-depth-4
+            .card-content
+              a.btn.btn-login.green(href='/iniciarsesion') REGISTRARTE GRATIS
+			  hr(style='width: 90%')
+			  p.center-align(style='font-size: 12px; margin-bottom: 1em;') ¿Ya tienes cuenta?
+			  a.btn.btn-login.white.black-text(href='/registrarce', style="border: 1px solid #000 !important;") INICIAR SESIÓN
+    .modal-footer.transparent(style='text-align: left;')
+      a.modal-close.white-text(href="#!") CERRAR
 footer.page-footer
 script(type='text/javascript').
+  $('.modal').modal();
   var categories = $('.categories a'),
   	menuOptions = $('.menu a');
   categories.click(function() {
