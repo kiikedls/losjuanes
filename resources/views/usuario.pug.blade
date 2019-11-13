@@ -26,9 +26,18 @@ style(type='text/css').
     margin-bottom: 14px;
   }
   
+  .divider {
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+  
   .details {
     display: flex;
     flex-direction: row;
+    width: 400px;
+    margin: auto;
+    margin-top: 24px;
+    justify-content: center;
   }
 | @endsection
 |
@@ -41,11 +50,14 @@ style(type='text/css').
   a.user-option.center-align.waves-effect.waves-light.btn-small.btn-menu.btn-menu-dark(href='#') SITIO WEB COMPLETO
   a.user-option.center-align.waves-effect.waves-light.btn-small.btn-menu.btn-menu-dark(href='#') AYUDA
   a.user-option.center-align.waves-effect.waves-light.btn-small.btn-menu.btn-menu-dark(href='/settings/account/logout') CERRAR SESIÓN
-  .details
-    a.center-align.priv-info(href='#') Información legal
-    a.center-align.priv-info(href='#') Privacidad
-    a.center-align.priv-info(href='#') Cookies
-    a.center-align.priv-info(href='#') Acerca de los anuncios
+.details
+  a.center-align.priv-info(href='#') Información legal
+  p.divider &#124;
+  a.center-align.priv-info(href='#') Privacidad
+  p.divider &#124;
+  a.center-align.priv-info(href='#') Cookies
+  p.divider &#124;
+  a.center-align.priv-info(href='#') Acerca de los anuncios
 | @endsection
 |
 | @section('extraJS')

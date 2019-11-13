@@ -79,13 +79,13 @@ a.option {
 	width: 20px;
 }
 
-#main-nav li.menu-bottom a.priv-info {
+.priv-info {
 	font-size: 12px;
     color: #b3b3b3;
 	height: 30px;
 }
 
-#main-nav li.menu-bottom a.priv-info:hover {
+.priv-info:hover {
 	text-decoration: underline;
 }
 
