@@ -9,6 +9,24 @@ div.icon.center-align
 h1(class="EmptyState__title") Crea tu primera playlist
 h4(class="EmptyState__subtitle") Te ayudamos a hacer tu casete recopilatorio perfecto (¡y sin casete!).
 center
-    button.btn.btn-white.cta-button Crear nueva playlist
+    a.btn.btn-white.cta-button.waves-effect.waves-light.btn.modal-trigger(href='#modal1') Crear nueva playlist
+    // Modal Structure
+    #modal1.modal.bf5f0e3120a568434ce7ed7fe108e659-scss
+        button.btn.btn-transparent(style='width: 32px;')
+          svg(width='32' height='32' viewbox='0 0 32 32' xmlns='http://www.w3.org/2000/svg')
+            title Close
+            path(d='M31.098 29.794L16.955 15.65 31.097 1.51 29.683.093 15.54 14.237 1.4.094-.016 1.508 14.126 15.65-.016 29.795l1.414 1.414L15.54 17.065l14.144 14.143' fill='#fff' fill-rule='evenodd')
+        h1._587844af67ca3c14dbf7deb3d5e64f69-scss.d437f883c49a54bba1849d160344bcec-scss.dc1cc34e88857bd0de4d7a4dc3c528a5-scss(dir='auto') Crear nueva playlist
+        ._7c0399398b8b07b1b1fa6764a3ed59b1-scss
+          .inputBox
+            .contentSpacing
+              h4.inputBox-label Nombre de la playlist
+              input.inputBox-input(type='text' placeholder='Nueva playlist' value='')
+        .button-group.button-group--horizontal
+            .button-group__item
+              button.btn.btn-menu-dark CANCELAR
+            .button-group__item
+              button.btn.btn-green CREAR
+
 
 | @endsection
