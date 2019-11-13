@@ -182,12 +182,15 @@
                         <div id="progress" class="determinate" style="width: 0%;background-color: darkgray"></div>
                     </div>
                 </div>
-                <div id="playback-bar" class="col s1">
+                <div id="playback-time" class="col s1">
                 </div>
             </div>
         </div>
-        <div class="col s3">
-            <a href="#"><i class="material-icons">home</i></a>
+        <div class="col s3 row">
+            <a href="#" class="col s2"><i class="material-icons">volume_up</i></a>
+            <div class="progress col s6" style="background-color: #424242">
+                <div id="progress" class="determinate" style="width: 100%;background-color: #1ed760"></div>
+            </div>
         </div>
     </div>
 
@@ -214,6 +217,8 @@
     var current_track=0;
     var song,audio,duration;
     var playing=false;
+    var rand=false;
+    var repeat=false;
     var songs=[{
         title:'Under the knife',
         artist:'Rise against',
@@ -277,6 +282,12 @@
     }, false);
     next.addEventListener("click", nextTrack, false);
     prev.addEventListener("click", prevTrack, false);
+
+    /*function aleatorio() {
+        shuf.innerHTML='<a href="#" id="shuf" style="color: #1ed760"><i class="material-icons">shuffle</i></a>';
+    }
+
+    shuf.addEventListener("click",aleatorio,false);*/
 
     function updateTrack() {
         curtime = audio.currentTime;

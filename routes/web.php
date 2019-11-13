@@ -25,6 +25,9 @@ Route::get('/registrarce', function () {
 });
 
 Route::get('/reproductor',function (){
+    return view('reproductor');
+});
+route::get('/rep',function (){
     return view('repro');
 });
 
