@@ -49,4 +49,16 @@ class Usuarios extends Controller
 		Session::flush();
 		return redirect('/');
 	}
+
+    function buscar(Request $r)
+    {
+        $texto=$r->get('consulta');
+
+        $consulta = DB::table('canciones')
+        ->where('nombre', 'regexp', $texto)
+        ->select('canciones.nombre')
+        ->get();
+
+        return $consulta;
+    }
 }

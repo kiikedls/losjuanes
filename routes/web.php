@@ -69,3 +69,9 @@ Route::post('/login', 'Usuarios@IniciarSesion');
 Route::post('/register', 'Usuarios@Registrarusuario');
 
 
+Route::get('/search',function()
+{
+    return view('search');
+});
+
+Route::post('/buscar','Usuarios@buscar');
