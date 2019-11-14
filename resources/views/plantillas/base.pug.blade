@@ -20,7 +20,7 @@ head
       a.selected(href='/')
         i.fas.fa-home
         b Inicio
-      a(href='#')
+      a(href='/search')
         i.fas.fa-search
         b Buscar
       | @if(Session::has('usuario'))
@@ -76,10 +76,10 @@ head
         .col.s6
           .card.card-small.z-depth-4
             .card-content
-              a.btn.btn-login.green(href='/iniciarsesion') REGISTRARTE GRATIS
+              a.btn.btn-login.green(href='/registrarce') REGISTRARTE GRATIS
 			  hr(style='width: 90%')
 			  p.center-align(style='font-size: 12px; margin-bottom: 1em;') ¿Ya tienes cuenta?
-			  a.btn.btn-login.white.black-text(href='/registrarce', style="border: 1px solid #000 !important;") INICIAR SESIÓN
+			  a.btn.btn-login.white.black-text(href='/iniciarsesion', style="border: 1px solid #000 !important;") INICIAR SESIÓN
     .modal-footer.transparent(style='text-align: left;')
       a.modal-close.white-text(href="#!") CERRAR
   #modal1.modal.bf5f0e3120a568434ce7ed7fe108e659-scss
