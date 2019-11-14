@@ -282,4 +282,10 @@ div(style='margin-left: 20px; margin-right: 20px;')
 |
 | @section('extraJS')
 script(src='/js/interfaz.js')
+script(type='text/javascript').
+  var imgHeads = $('.imgs-head');
+  imgHeads.find('.option').each(function() {
+    var encodedTitle = encodeURI($(this).parent().find('.title').text());
+    $(this).attr('href', '/view/' + encodedTitle);
+  });
 | @endsection

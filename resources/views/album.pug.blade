@@ -1,0 +1,31 @@
+| @extends('plantillas.base')
+|
+| @section('content')
+h4.white-text(style='margin-left: 18px;')
+  .imgs-head
+      div
+        h4.white-text.title
+          b {{$title}}
+  .row.img-container.center-align(style='flex-wrap: wrap; width: 102%;')
+    - var n = 1;
+    while n <= 8
+      - n++
+      a(href='/reproductor')
+        img(src='/img/main1/pod1.jpg' alt='')
+        figcaption Regional mexicana
+      a(href='/reproductor')
+        img(src='/img/main1/pod2.jpg' alt='')
+        figcaption Music of Mexico
+      a(href='/reproductor')
+        img(src='/img/main1/ini3.jpg' alt='')
+        figcaption Latina
+      a(href='/reproductor')
+        img(src='/img/main1/pod4.jpg' alt='')
+        figcaption Pop
+      a(href='/reproductor')
+        img(src='/img/main1/ini5.jpg' alt='')
+        figcaption Wellness
+      a(href='/reproductor')
+        img(src='/img/main1/pod6.jpg' alt='')
+        figcaption Rock
+| @endsection

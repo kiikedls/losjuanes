@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+use Illuminate\Http\Request;
 
 Route::get('/', function () {
     return redirect('/browse/featured');
@@ -75,3 +75,7 @@ Route::get('/search',function()
 });
 
 Route::post('/buscar','Usuarios@buscar');
+
+Route::get('/view/{title}', function(Request $request) {
+	return view('album')->with('title', $request->title);
+});
