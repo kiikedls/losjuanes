@@ -46,7 +46,54 @@ body {
 /*.c1{*/
 /*    margin-top: -65px;*/
 /*}*/
+.p{
+    margin-top:50px;
+}
+.btn {
+    font-size: 11px !important;
+    line-height: 16px !important;
+    letter-spacing: .015em !important;
+    color: #b3b3b3 !important;
+    text-transform: uppercase !important;
+    letter-spacing: .16em !important;
+    -webkit-transition: none 33ms cubic-bezier(.3, 0, .7, 1) !important;
+    transition: none 33ms cubic-bezier(.3, 0, .7, 1) !important;
+    transition-property: none !important ;
+    -webkit-transition-property: all !important;
+    transition-property: all !important;
+    color: #fff !important;
+    margin-top: 16px !important;
+    display: inline-block !important;
+    margin-bottom: 0 !important;
+    text-align: center !important;
+    -ms-touch-action: manipulation !important;
+    touch-action: manipulation !important;
+    background-image: none !important;
+    border: 0 !important;
+    border-radius: 500px !important;
+    padding: 13px !important;
+    min-width: 130px !important;
+    white-space: normal !important;
+    will-change: transform !important;
+    line-height: 1.6 !important;
+    vertical-align: middle !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
 
+}
+
+.btn.btn-white {
+    background: #fff !important;
+    color: #000 !important;
+    padding: 11px 44px !important;
+}
+
+.ci {
+    display: flex;
+    flex-direction: column;
+}
 .Rootlist__playlists-header {
     --left-sidebar-padding-left: 20px;
     padding-top: 35px;
