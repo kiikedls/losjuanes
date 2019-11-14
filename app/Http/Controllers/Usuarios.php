@@ -36,6 +36,9 @@ class Usuarios extends Controller
             $User->genero  = $request->genero;
             $User->save();
 
+
+            $usuario = Usuario::where('correo', '=', $User->correo)->get()->first();
+            Session::put('usuario', $usuario);
             return redirect('/');
         }
         return redirect('iniciarsesion');
