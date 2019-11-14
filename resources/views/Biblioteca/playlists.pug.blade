@@ -1,8 +1,70 @@
-| @extends('plantillas.biblioteca')
+| @extends('plantillas.base')
 |
-| @section('content')
+| @section('extraCSS')
+link(rel='stylesheet' href='/css/biblioteca.css')
+style.
+    .p{
+        margin-top:50px;
+    }
+     .btn {
+                font-size: 11px;
+                line-height: 16px;
+                letter-spacing: .015em;
+                color: #b3b3b3;
+                text-transform: uppercase;
+                letter-spacing: .16em;
+                -webkit-transition: none 33ms cubic-bezier(.3, 0, .7, 1);
+                transition: none 33ms cubic-bezier(.3, 0, .7, 1);
+                transition-property: none;
+                -webkit-transition-property: all;
+                transition-property: all;
+                color: #fff;
+                margin-top: 16px;
+                display: inline-block;
+                margin-bottom: 0;
+                text-align: center;
+                -ms-touch-action: manipulation;
+                touch-action: manipulation;
+                background-image: none;
+                border: 0;
+                border-radius: 500px;
+                padding: 13px;
+                min-width: 130px;
+                white-space: normal;
+                will-change: transform;
+                line-height: 1.6;
+                vertical-align: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
 
-div.icon.center-align
+            }
+
+            .btn.btn-white {
+
+                background: #fff;
+
+                color: #000;
+                padding: 11px 44px;
+
+            }
+
+            .ci {
+                display: flex;
+                flex-direction: column;
+            }
+| @endsection
+
+| @section('content')
+.row.categories
+    a.link1.selected.option(href='/collection/playlists') PLAYLISTS
+    a.link2.option(class="{{request()->is('ESPECIALMENTE PARA TI') ? 'selected' : ''}}" href='/collection/made-for-you') ESPECIALMENTE PARA TI
+    a.link3.option(href='/collection/tracks') CANCIONES QUE TE GUSTAN
+    a.link4.option(href='/collection/albums') ÁLBUMES
+    a.link5.option(href='/collection/artists') ARTISTAS
+    a.link6.option(href='/collection/podcasts') PODCASTS
+div.icon.center-align.p
     svg(width="51" height="52" viewBox="0 0 51 52" xmlns="http://www.w3.org/2000/svg")
         title Add Playlist Icon
         path(d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10c0-5.524-4.477-10-10-10zm7 11h-6v6H9v-6H3V9h6V3h2v6h6v2zm7.75-3.655c.118.653.188 1.32.217 2L49 4.234v27.03c-1.65-2.044-4.174-3.356-7-3.356-4.962 0-9 4.037-9 9 0 4.962 4.038 9 9 9s9-4.038 9-9V1.764l-26.25 5.58zM42 43.91c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm-25-6.556C15.348 35.31 12.826 34 10 34c-4.963 0-9 4.037-9 9 0 4.96 4.037 9 9 9s9-4.04 9-9V21.97c-.632.476-1.296.912-2 1.285v14.097zM10 50c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7c0 3.858-3.14 7-7 7z" fill="currentColor" fill-rule="evenodd")
@@ -10,23 +72,4 @@ h1(class="EmptyState__title") Crea tu primera playlist
 h4(class="EmptyState__subtitle") Te ayudamos a hacer tu casete recopilatorio perfecto (¡y sin casete!).
 center
     a.btn.btn-white.cta-button.waves-effect.waves-light.btn.modal-trigger(href='#modal1') Crear nueva playlist
-    // Modal Structure
-    #modal1.modal.bf5f0e3120a568434ce7ed7fe108e659-scss
-        button.btn.btn-transparent(style='width: 32px;')
-          svg(width='32' height='32' viewbox='0 0 32 32' xmlns='http://www.w3.org/2000/svg')
-            title Close
-            path(d='M31.098 29.794L16.955 15.65 31.097 1.51 29.683.093 15.54 14.237 1.4.094-.016 1.508 14.126 15.65-.016 29.795l1.414 1.414L15.54 17.065l14.144 14.143' fill='#fff' fill-rule='evenodd')
-        h1._587844af67ca3c14dbf7deb3d5e64f69-scss.d437f883c49a54bba1849d160344bcec-scss.dc1cc34e88857bd0de4d7a4dc3c528a5-scss(dir='auto') Crear nueva playlist
-        ._7c0399398b8b07b1b1fa6764a3ed59b1-scss
-          .inputBox
-            .contentSpacing
-              h4.inputBox-label Nombre de la playlist
-              input.inputBox-input(type='text' placeholder='Nueva playlist' value='')
-        .button-group.button-group--horizontal
-            .button-group__item
-              button.btn.btn-menu-dark CANCELAR
-            .button-group__item
-              button.btn.btn-green CREAR
-
-
 | @endsection

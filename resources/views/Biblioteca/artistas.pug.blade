@@ -1,6 +1,70 @@
-| @extends('plantillas.biblioteca')
+| @extends('plantillas.base')
 |
+| @section('extraCSS')
+link(rel='stylesheet' href='/css/biblioteca.css')
+style.
+    .p{
+        margin-top:50px;
+    }
+     .btn {
+                font-size: 11px;
+                line-height: 16px;
+                letter-spacing: .015em;
+                color: #b3b3b3;
+                text-transform: uppercase;
+                letter-spacing: .16em;
+                -webkit-transition: none 33ms cubic-bezier(.3, 0, .7, 1);
+                transition: none 33ms cubic-bezier(.3, 0, .7, 1);
+                transition-property: none;
+                -webkit-transition-property: all;
+                transition-property: all;
+                color: #fff;
+                margin-top: 16px;
+                display: inline-block;
+                margin-bottom: 0;
+                text-align: center;
+                -ms-touch-action: manipulation;
+                touch-action: manipulation;
+                background-image: none;
+                border: 0;
+                border-radius: 500px;
+                padding: 13px;
+                min-width: 130px;
+                white-space: normal;
+                will-change: transform;
+                line-height: 1.6;
+                vertical-align: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+
+            }
+
+            .btn.btn-white {
+
+                background: #fff;
+
+                color: #000;
+                padding: 11px 44px;
+
+            }
+
+            .ci {
+                display: flex;
+                flex-direction: column;
+            }
+| @endsection
+
 | @section('content')
+.row.categories
+    a.link1.option(href='/collection/playlists') PLAYLISTS
+    a.link2.option(class="" href='/collection/made-for-you') ESPECIALMENTE PARA TI
+    a.link3.option(href='/collection/tracks') CANCIONES QUE TE GUSTAN
+    a.link4.option(href='/collection/albums') ÁLBUMES
+    a.link5.option(class="selected" href='/collection/artists') ARTISTAS
+    a.link6.option(href='/collection/podcasts') PODCASTS
+
 
 div.icon.center-align
     svg(width='52' height='54' viewbox='0 0 52 54' xmlns='http://www.w3.org/2000/svg')
@@ -13,3 +77,8 @@ center
     button.btn.btn-white.cta-button  buscar
 
 | @endsection
+
+
+
+
+
