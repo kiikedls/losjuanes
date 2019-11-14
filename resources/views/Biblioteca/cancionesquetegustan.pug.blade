@@ -1,8 +1,72 @@
-| @extends('plantillas.biblioteca')
+| @extends('plantillas.base')
 |
-| @section('content')
+| @section('extraCSS')
+link(rel='stylesheet' href='/css/biblioteca.css')
+style.
+    .p{
+        margin-top:50px;
+    }
+     .btn {
+                font-size: 11px;
+                line-height: 16px;
+                letter-spacing: .015em;
+                color: #b3b3b3;
+                text-transform: uppercase;
+                letter-spacing: .16em;
+                -webkit-transition: none 33ms cubic-bezier(.3, 0, .7, 1);
+                transition: none 33ms cubic-bezier(.3, 0, .7, 1);
+                transition-property: none;
+                -webkit-transition-property: all;
+                transition-property: all;
+                color: #fff;
+                margin-top: 16px;
+                display: inline-block;
+                margin-bottom: 0;
+                text-align: center;
+                -ms-touch-action: manipulation;
+                touch-action: manipulation;
+                background-image: none;
+                border: 0;
+                border-radius: 500px;
+                padding: 13px;
+                min-width: 130px;
+                white-space: normal;
+                will-change: transform;
+                line-height: 1.6;
+                vertical-align: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
 
-div.icon.center-align
+            }
+
+            .btn.btn-white {
+
+                background: #fff;
+
+                color: #000;
+                padding: 11px 44px;
+
+            }
+
+            .ci {
+                display: flex;
+                flex-direction: column;
+            }
+| @endsection
+
+| @section('content')
+.row.categories
+    a.link1.option(href='/collection/playlists') PLAYLISTS
+    a.link2.option(class="" href='/collection/made-for-you') ESPECIALMENTE PARA TI
+    a.link3.option(class="selected" href='/collection/tracks') CANCIONES QUE TE GUSTAN
+    a.link4.option(href='/collection/albums') ÁLBUMES
+    a.link5.option(href='/collection/artists') ARTISTAS
+    a.link6.option(href='/collection/podcasts') PODCASTS
+
+
+div.icon.center-align.p
    svg(width='52' height='52' viewbox='0 0 52 52' xmlns='http://www.w3.org/2000/svg')
      title Add Song Icon
      path(d='M26 0C11.64 0 0 11.643 0 26c0 14.36 11.64 26 26 26s26-11.64 26-26S40.36 0 26 0zm0 50C12.767 50 2 39.234 2 26S12.767 2 26 2c13.234 0 24 10.766 24 24S39.234 50 26 50zm0-32c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.58-8-8-8zm0 14c-3.308 0-6-2.69-6-6s2.692-6 6-6 6 2.69 6 6-2.69 6-6 6z' fill='currentColor' fill-rule='evenodd')
@@ -12,3 +76,5 @@ center
     button.btn.btn-white.cta-button  descubrir
 
 | @endsection
+
+
