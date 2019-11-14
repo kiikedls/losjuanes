@@ -50,17 +50,15 @@ html(lang='es-MX')
                     div
                         a#band(href='#', style='color: #b3b3b3;') set it off
                     div(style='margin-top: 10px;')
-                        | {{--
-                        a.waves-effect.waves-light.btn(href='#') reproducir
-                        | --}}
-                        button.btn.green.btn-flat(type='button', style='border-radius: 100px; color: #ffffff;') reproducir
+
+                        button#btn.btn.green.btn-flat(type='button', style='border-radius: 100px; color: #ffffff;') reproducir
                     div
                         p(style='color: #b3b3b3b3;') 2012 . 15 canciones
                     div
                         a(href='#', style='margin-inline: 20px')
                             img(src='img/corazon.png', alt='', style='width: 20px; height: 20px;')
                         i.material-icons(style='margin-inline: 20px; color: #b3b3b3; width: 20px;height: 20px;') more_horiz
-                .container.col.s7
+                #btn-list.container.col.s7
                     ul.collection(style='border-width: 0px')
                         a(href='#')
                             li.collection-item.row(style='background-color: #181818;color: #fff;')
@@ -170,6 +168,8 @@ html(lang='es-MX')
             var title=document.getElementById('title');
             var artist=document.getElementById('artist');
             var art=document.getElementById('art');
+            var btn = document.getElementById('btn');
+            var btn_list = document.getElementById('btn-list');
             var current_track=0;
             var song,audio,duration;
             var playing=false;
@@ -221,6 +221,16 @@ html(lang='es-MX')
             }
             play.onclick=function () {
                 playing ? audio.pause():audio.play();
+            }
+            btn.onclick = function () {
+                if (playing == false) {
+                    audio.play();
+                }
+            }
+            btn_list.onclick = function () {
+                if (playing == false) {
+                    audio.play();
+                }
             }
             audio.addEventListener("pause", function () {
                 play.innerHTML = '<a href="#" id="play" style="color: #b3b3b3"><i class="material-icons">play_circle_outline</i></a>';

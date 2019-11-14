@@ -7,6 +7,7 @@ head
     link(rel='stylesheet' href='/css/interfaz.css')
     link(rel='stylesheet' href='/css/biblioteca.css')
     link(rel='stylesheet' href='/css/materialize.min.css')
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
     link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' integrity='sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=' crossorigin='anonymous')
     script(src='/js/jquery-3.4.1.js')
     script(src='/js/materialize.min.js')
@@ -127,6 +128,38 @@ head
 
 
 footer.page-footer
+            .row
+                .col.s3.row
+                    .col.s3
+                        img#art(src='', alt='', style='width: 60px; height: 60px;')
+                    .col.s6(style="font-family: 'Montserrat', sans-serif")
+                        #title titulo de la cancion
+                        #artist
+                            stong set it off
+                #player.center-align.col.s6
+                    #controles
+                        a#prev(href='#', style='color: #b3b3b3')
+                            i.material-icons skip_previous
+                        a#play(href='#', style='color: #b3b3b3')
+                            i.material-icons play_circle_outline
+                        a#next(href='#', style='color: #b3b3b3')
+                            i.material-icons skip_next
+                        a#rep(href='#', style='color: #b3b3b3')
+                            i.material-icons repeat
+                        a#shuf(href='#', style='color: #b3b3b3')
+                            i.material-icons shuffle
+                    #playback-bar.row
+                        #progress-time.col.s1
+                        #progress-bar.col.s6
+                            .progress(style='background-color: #424242')
+                                #progress.determinate(style='width: 0%;background-color: darkgray')
+                        #playback-time.col.s1
+                .col.s3.row
+                    a.col.s2(href='#')
+                        i.material-icons volume_up
+                    div.progress.col.s6(style='background-color: #424242')
+                        div.determinate(style='width: 100%;background-color: #1ed760')
+            |
 script(type='text/javascript').
   var categories = $('.categories a'),
   	menuOptions = $('.menu a');
@@ -147,3 +180,124 @@ script.
   $(document).ready(function(){
   $('.modal').modal();
   });
+
+  //aqui el script del reproductor
+    var holding=false;
+    var track=document.getElementById('progress-bar');
+    var progress=document.getElementById('progress');
+    var play=document.getElementById('play');
+    var prev=document.getElementById('prev');
+    var next=document.getElementById('next');
+    var rep=document.getElementById('rep');
+    var shuf=document.getElementById('shuf');
+    var title=document.getElementById('title');
+    var artist=document.getElementById('artist');
+    var art=document.getElementById('art');
+    var current_track=0;
+    var song,audio,duration;
+    var playing=false;
+    var rand=false;
+    var repeat=false;
+    var songs=[{
+        title:'Under the knife',
+        artist:'Rise against',
+        url:'../music/song.mp3',
+        art:'../img/ra.jpg'
+    },
+      {
+          title:'Wherever i go',
+          artist:'One republic',
+          url:'../music/song2.mp3',
+          art:'../img/or.jpg'
+      },
+      {
+          title:'The haunting',
+          artist:'set it off',
+          url:'../music/song3.mp3',
+          art:'../img/sio.jpg'
+      }];
+      window.addEventListener('load',init(),false);
+      function init() {
+          song=songs[current_track];
+          audio=new Audio();
+          audio.src=song.url;
+          title.textContent=song.title;
+          artist.textContent=song.artist;
+          art.src=song.art;
+      }
+      audio.addEventListener('timeupdate',updateTrack,false);
+      audio.addEventListener('loadedmetadata',function () {
+          duration=this.duration;
+      },false);
+      window.onmousedown=function (e) {
+          e.preventDefault();
+          if (holding) seekTrack(e);
+      }
+      window.onmouseup=function (e) {
+          holding=false;
+          console.log(holding);
+      }
+      track.onmousedown=function (e) {
+          holding=true;
+          seekTrack(e);
+          console.log(holding);
+      }
+      play.onclick=function () {
+          playing ? audio.pause():audio.play();
+      }
+      audio.addEventListener("pause", function () {
+          play.innerHTML = '<a href="#" id="play" style="color: #b3b3b3"><i class="material-icons">play_circle_outline</i></a>';
+          playing = false;
+      }, false);
+      audio.addEventListener("playing", function () {
+          play.innerHTML = '<a href="#" id="play" style="color: #b3b3b3"><i class="material-icons">pause_circle_outline</i></a>';
+          playing = true;
+      }, false);
+      next.addEventListener("click", nextTrack, false);
+      prev.addEventListener("click", prevTrack, false);
+                /*function aleatorio() {
+                shuf.innerHTML='<a href="#" id="shuf" style="color: #1ed760"><i class="material-icons">shuffle</i></a>';
+                }
+                shuf.addEventListener("click",aleatorio,false);*/
+      function updateTrack() {
+          curtime = audio.currentTime;
+          percent = Math.round((curtime * 100) / duration);
+          progress.style.width = percent + '%';
+      }
+      function seekTrack(e) {
+          event = e || window.event;
+          var x = e.pageX - player.offsetLeft - track.offsetLeft;
+          percent = Math.round((x * 100) / track.offsetWidth);
+          if (percent > 100) percent = 100;
+          if (percent < 0) percent = 0;
+          progress.style.width = percent + '%';
+          handler.style.left = percent + '%';
+          audio.play();
+          audio.currentTime = (percent * duration) / 100
+      }
+      function nextTrack() {
+          current_track++;
+          current_track = current_track % (songs.length);
+          song = songs[current_track];
+          audio.src = song.url;
+          audio.onloadeddata = function() {
+              updateInfo();
+          }
+      }
+      function prevTrack() {
+          current_track--;
+          current_track = (current_track == -1 ? (songs.length - 1) : current_track);
+          song = songs[current_track];
+          audio.src = song.url;
+          audio.onloadeddata = function() {
+              updateInfo();
+          }
+      }
+      function updateInfo() {
+          title.textContent = song.title;
+          artist.textContent = song.artist;
+          art.src = song.art;
+          art.onload = function() {
+              audio.play();
+          }
+      }

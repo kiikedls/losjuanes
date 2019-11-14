@@ -54,8 +54,7 @@
                 <a id="band" href="#" style="color: #b3b3b3;">set it off</a>
             </div>
             <div style="margin-top: 10px;">
-                {{--            <a class="waves-effect waves-light btn" href="#">reproducir</a>--}}
-                <button type="button" class="btn green btn-flat" style="border-radius: 100px; color: #ffffff;">reproducir</button>
+                <button id="btn" type="button" class="btn green btn-flat" style="border-radius: 100px; color: #ffffff;">reproducir</button>
             </div>
             <div>
                 <p style="color: #b3b3b3b3;">2012 . 15 canciones</p>
@@ -65,7 +64,7 @@
                 <i class="material-icons" style="margin-inline: 20px; color: #b3b3b3; width: 20px;height: 20px;">more_horiz</i>
             </div>
         </div>
-        <div class="container col s7">
+        <div id="btn-list" class="container col s7">
             <ul class="collection" style="border-width: 0px">
                 <a href="#"><li class="collection-item row" style="background-color: #181818;color: #fff;">
                     <div class="col s1">
@@ -73,7 +72,7 @@
                     </div>
                     <div class="col s10 row">
                         <div class="col s12" style="font-weight: bold; font-size: large;font-family: 'Montserrat';">
-                            titulo de la cancion
+                            Lorem ipsum dolor sit amet consectetur adipiscing
                         </div>
                         <div class="col s12" style="color: grey; font-family: 'Montserrat';">set it off</div>
                     </div>
@@ -85,7 +84,7 @@
                     </div>
                     <div class="col s10 row">
                         <div class="col s12" style="font-weight: bold; font-size: large;font-family: 'Montserrat';">
-                            titulo de la cancion
+                            Vitae ridiculus sociosqu ornare lacinia
                         </div>
                         <div class="col s12" style="color: grey; font-family: 'Montserrat';">set it off</div>
                     </div>
@@ -97,7 +96,7 @@
                     </div>
                     <div class="col s10 row">
                         <div class="col s12" style="font-weight: bold; font-size: large;font-family: 'Montserrat';">
-                            titulo de la cancion
+                            maecenas massa sollicitudin
                         </div>
                         <div class="col s12" style="color: grey; font-family: 'Montserrat';">set it off</div>
                     </div>
@@ -109,7 +108,7 @@
                     </div>
                     <div class="col s10 row">
                         <div class="col s12" style="font-weight: bold; font-size: large;font-family: 'Montserrat';">
-                            titulo de la cancion
+                            Libero aptent bibendum commodo class orci
                         </div>
                         <div class="col s12" style="color: grey; font-family: 'Montserrat';">set it off</div>
                     </div>
@@ -121,7 +120,7 @@
                     </div>
                     <div class="col s10 row">
                         <div class="col s12" style="font-weight: bold; font-size: large;font-family: 'Montserrat';">
-                            titulo de la cancion
+                            elit eleifend pulvinar ut
                         </div>
                         <div class="col s12" style="color: grey; font-family: 'Montserrat';">set it off</div>
                     </div>
@@ -133,7 +132,7 @@
                     </div>
                     <div class="col s10 row">
                         <div class="col s12" style="font-weight: bold; font-size: large;font-family: 'Montserrat';">
-                            titulo de la cancion
+                            Curae placerat accumsan himenaeos
                         </div>
                         <div class="col s12" style="color: grey; font-family: 'Montserrat';">set it off</div>
                     </div>
@@ -145,7 +144,7 @@
                     </div>
                     <div class="col s10 row">
                         <div class="col s12" style="font-weight: bold; font-size: large;font-family: 'Montserrat';">
-                            titulo de la cancion
+                            metus vehicula vulputate, ultrices ligula
                         </div>
                         <div class="col s12" style="color: grey; font-family: 'Montserrat';">set it off</div>
                     </div>
@@ -213,6 +212,8 @@
     var title=document.getElementById('title');
     var artist=document.getElementById('artist');
     var art=document.getElementById('art');
+    var btn=document.getElementById('btn');
+    var btn_list=document.getElementById('btn-list');
 
     var current_track=0;
     var song,audio,duration;
@@ -270,6 +271,16 @@
 
     play.onclick=function () {
         playing ? audio.pause():audio.play();
+    }
+    btn.onclick=function(){
+        if (playing == false) {
+            audio.play();
+        }
+    }
+    btn_list.onclick=function(){
+        if (playing == false) {
+            audio.play();
+        }
     }
     audio.addEventListener("pause", function () {
         play.innerHTML = '<a href="#" id="play" style="color: #b3b3b3"><i class="material-icons">play_circle_outline</i></a>\n';
